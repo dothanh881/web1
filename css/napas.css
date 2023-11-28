@@ -1,0 +1,98 @@
+
+  
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: #000;
+    outline: none;
+  }
+  
+  .btn {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-primary {
+    background-color: #1964af;
+  }
+  
+  .btn-secondary {
+    background-color: #959595;
+  }
+  
+  /* .row {
+    margin-bottom: 20px;
+  }
+  
+  .col-md-6 {
+    width: 50%;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+  }
+   */
+ 
+.checksubmit{
+    display:flex;
+}
+
+.checks{
+    width: 15px;
+    height: 15px;
+}
+
+.labels{
+    margin-left: 6px;
+    margin-bottom: 15px;
+}
+
+.btnform{
+    margin-bottom: 10px;
+
+}
+.imgbank{
+    width: 350px;
+    height: 200px;
+    
+}
+
+.left{
+    height: 390px;
+    width: 350px;
+    margin-top: 150px;
+}
+.right{
+    margin-top: 100px;
+}
+
+.maind{
+    margin-bottom: 50px;
+}
+

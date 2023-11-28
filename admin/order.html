@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/orderdetail.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+      <section id="menu" class="container-fluid">
+          <div class="logo">
+            <img src="/img/logo.png" alt="">
+            <h2>ADMIN</h2>
+          </div>
+          <div class="items">
+            <a href="admin.html"><li><i class="fa fa-users"></i>Người dùng</li></a>
+            <a href="category.html"><li > <i class="fa fa-product-hunt"></i> Sản phẩm</li></a>
+            <a href="order.html"><li class="nav-active"><i class="fa fa-truck"></i>Đơn hàng</li></a>
+            <a href="thongke.html"><li><i class="fa fa-pencil-square-o"></i>Thống kê </li></a>
+          
+          </div>
+
+        </section>
+
+      <section id="interface">
+        <div class="nav">
+          <div class="n1">
+            
+            <div class="left-pull">
+
+              <div id="menu-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+              
+            
+          
+              <div class="search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="text" placeholder="Tìm kiếm">
+              </div>
+            </div>
+             
+            
+            <div class="profile">
+              <i class="fa fa-bell" aria-hidden="true"></i>
+              
+                <img src="/img/ava2.jpg" alt="" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <img src="/img/ava2.jpg" alt="">
+                      <h3>Admin</h3>
+                    </div>
+
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                      <img src="/img/profile.png" alt="">
+                      <p>Chỉnh sửa hồ sơ</p>
+                      <span>></span>
+                    </a>
+                    
+                    <a href="/index.html" class="sub-menu-link">
+                      <img src="/img/logout.png" alt="">
+                      <p>Đăng xuất</p>
+                      <span>></span>
+                    </a>
+
+                  </div>
+                </div>
+            
+              
+
+              </div>
+
+          </div>
+
+         
+          <div class="i-name"></div>
+       
+
+        <div class="container">
+			<div class="order">
+			  <div class="row">
+		
+				<div class="col-md-6 col-lg-4 form-group date-check">
+				  <label for="datefrom">Bắt đầu từ</label>
+				  <input type="date" id="datefrom" name="datefrom" class="form-control">
+				</div>
+		  
+				<div class="col-md-6 col-lg-4 form-group date-check">
+				  <label for="dateto">Đến</label>
+				  <input type="date" id="dateto" name="dateto" class="form-control">
+				</div>
+			  </div>
+			  <button class="btn btn-primary text-center active  col-sm-2 btnsearch" type="button">Tìm kiếm</button>
+			
+
+			</div>
+			
+		  </div>
+         
+          <div class="container sect1">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h2>Quản lí đơn hàng</h2>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày thực hiện</th>						
+                                <th>Email thực hiện</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GHTK-1606070005</td>             
+                                <td>04/10/2023</td>
+                                <td>hdkhang@gmail.com</td>                        
+                                <td>32.000.000đ</td>
+                                <td><span class="status text-success">&bull;</span> Đã thanh toán</td>
+                                <td>
+                                    <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
+      
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>GHTK-1606070011</td>             
+                                <td>26/11/2023</td>
+                                <td>nhienguyen@gmail.com</td>                        
+                                <td>20.000.000đ</td>
+                                <td><span class="status text-danger">&bull;</span> Đã hủy</td>
+                                <td>
+                                    <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
+      
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>GHTK-1606070235</td>             
+                                <td>2/12/2023</td>
+                                <td>dpthanh@gmail.com</td>                        
+                                <td>23.000.000đ</td>
+                                <td><span class="status text-primary">&bull;</span> Đang vận chuyển</td>
+                                <td>
+                                    <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
+      
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>GHTK-1606071505</td>             
+                                <td>01/12/2023</td>
+                                <td>ngvana@gmail.com</td>                        
+                                <td>31.000.000đ</td>
+                                <td><span class="status text-warning">&bull;</span> Chờ thanh toán</td>
+                                <td>
+                                    <a href="#"  onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
+      
+                                </td>
+                            </tr>
+                            
+                           
+                        </tbody>
+                    </table>
+                    <div class="clearfix">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a href="#">Trước</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item "><a href="#" class="page-link">3</a></li>
+                           
+                            <li class="page-item"><a href="#" class="page-link">Tiếp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+        
+
+        <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+            <div class="card overlayTable">
+                <div class="title">Chi tiết đơn hàng</div>
+                <div class="info">
+                    <div class="row">
+                        <div class="col-7 pull-left">
+                            <span id="heading">Ngày</span><br>
+                            <span id="details">16-11-2023</span>
+                        </div>
+                        <div class="col-5 pull-right">
+                            <span id="heading">Mã đơn hàng</span><br>
+                            <span id="details">GHTK-1606070005</span>
+                        </div>
+                    </div>      
+                </div>      
+                <div class="pricing">
+                    <div class="row">
+                        <div class="col-md-9 pull-left">
+                            <span id="name">iPhone 14 Pro Max</span>  
+                        
+                        </div>
+                        <div class="col-md-3 pull-right">
+                            <span id="price">35.000.000đ</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-9 pull-left">
+                            <span id="name">Ship</span>
+                        </div>
+                        <div class="col-md-3 pull-right">
+                            <span id="price">0đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="row">
+                        <div class="col-9"></div>
+                        <div class="col-3 pull-right"><big>35.000.000đ</big></div>
+                    </div>
+                </div>
+                <div class="tracking">
+                    <div class="title">Theo dõi đơn hàng</div>
+                </div>
+                <div class="progress-track">
+                    <ul id="progressbar">
+                        <li class="step0 active " id="step1">Đã đặt đơn</li>
+                        <li class="step0 active text-center" id="step2">Đã lấy đơn</li>
+                        <li class="step0 active text-right" id="step3">Đang trên đường giao</li>
+                        <li class="step0 active text-right" id="step4">Đã giao hàng thành công</li>
+                    </ul>
+                </div>
+                
+    
+            
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+          
+        </tbody>
+
+
+
+      </table>
+
+    
+
+       
+      
+    </div>
+         
+    
+
+
+      </section>
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/admin.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

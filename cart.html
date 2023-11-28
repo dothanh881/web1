@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Electro - HTML Ecommerce Template</title>
+
+ 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+ 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+ 		<!-- Slick -->
+ 		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+ 		<!-- nouislider -->
+ 		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+ 		<!-- Font Awesome Icon -->
+ 		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+ 		<!-- Custom stlylesheet -->
+ 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/user.css">
+ 		<link rel="stylesheet" href="css/searchproduct.css">
+		 <link rel="stylesheet" href="css/cart.css">
+
+    </head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header" class="user">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> +098-95-51-84</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> 273 An Dương Vương</a></li>
+					</ul>
+					<ul class="header-links pull-right ">
+						<li><a href="#"><i class="fa fa-money"></i> VND</a></li>
+						<li onclick="toggleMenu()"><img class="ava-user"  src="img/ava1.png"  alt="" > <a href="#">user1234</a></li>     
+						<div class="sub-menu-wrap" id="subMenu">
+						  <div class="sub-menu">
+							<div class="user-info">
+							  <img src="img/ava1.png" alt="">
+							  <h3>User1234</h3>
+							</div>
+		
+							<hr>
+		
+							<a href="profile.html" class="sub-menu-link">
+							  <img src="img/profile.png" alt="">
+							  <p>Chỉnh sửa hồ sơ</p>
+							  <span>></span>
+							</a>
+		
+							
+					
+				
+							<a href="history.html" class="sub-menu-link">
+							  <img src="img/history.png" alt="">
+							  <p>Lịch sử mua hàng</p>
+							  <span>></span>
+							</a>
+
+							<a href="#"  class="sub-menu-link" onclick="logout()">
+								<img src="img/logout.png" alt="">
+								<p>Đăng xuất</p>
+								<span>></span>
+							</a>
+		
+						  </div>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="user.html" class="logo">
+									<img src="./img/logo.png" alt="">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<input class="input" id="search-item" placeholder="Bạn cần tìm gì?"
+									 onkeyup="search()" >
+								<button class="search-btn">Tìm kiếm</button>
+								
+								</form>
+							
+									<div class="product-listss" id="product-listss">
+										<div class="prod">
+											<a href="product1.html"><img src="img/product01.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 14 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product1.html"><img src="img/product02.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 13 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product1.html"><img src="img/product03.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 12 Pro Max</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product1.html"><img src="img/product04.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 15 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product2.html"><img src="img/product05.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S23 Ultra</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product2.html"><img src="img/product06.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S21 5G</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product2.html"><img src="img/product07.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy Z Flip 4</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product2.html"><img src="img/product08.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S20 Ultra</h2></a>
+											</div>
+										</div>
+									
+
+										<div class="prod">
+											<a href="product1.html"><img src="img/product09.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 11 Pro </h2></a>
+											</div>
+										</div>
+									</div>
+							
+								
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<span>Yêu thích</span>
+										<div class="qty">2</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<div>Giỏ hàng</div>
+										<span class="qty">0</span>
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+										</div>
+										<div class="cart-btns">
+											<a href="cart.html">Xem giỏ hàng</a>
+											<a href="checkout1.html">Thanh toán  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Danh mục</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="user.html">Trang chủ</a></li>
+						<li><a href="contact1.html">Liên hệ</a></li>
+						<li><a href="store1.html">Sản phẩm</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+
+		<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="breadcrumb-header">Giỏ hàng</h3>
+						<ul class="breadcrumb-tree">
+							<li><a href="user.html">Trang chủ</a></li>
+							<li class="active">Giỏ hàng</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+		<!-- MAINCART -->
+        <div class="container mt-1 mb-3  ">
+				<div class="header-cart table-responsive-sm">
+				<table class="table ">
+					<th class="hd-cart-item text-center">SẢN PHẨM</th>
+					<th class="hd-cart-price text-center">ĐƠN GIÁ</th>
+					<th class="hd-cart-qty text-center">SỐ LƯỢNG</th>
+					<th class="hd-cart-total text-center">SỐ TIỀN</th>
+				</table>
+				
+				</div>
+				<div class="cart-itemlist">
+
+				</div>
+					
+				
+        </div>
+		<div class="btn-check pull-right">
+			<a href="checkout1.html"><button type="button" class="btn btn-primary" >Thanh toán</button></a> 
+		</div>
+        <!-- /MAICART -->
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- NEWSLETTER -->
+		<div id="newsletter" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="newsletter">
+							<p>Đăng kí để nhận  <strong>THÔNG BÁO MỚI NHẤT</strong></p>
+							<form>
+								<input class="input" type="email" placeholder="Nhập Email của bạn">
+								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Đăng kí</button>
+							</form>
+							<ul class="newsletter-follow">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-pinterest"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						
+						<div class="col-md-3 col-xm-6">
+							<div class="footer">
+								<h3 class="footer-title">Thông tin</h3>
+								<p>Là cửa hàng bán điện thoại uy tín, chất lượng và chính hãng, có nhiều chi nhánh trên toàn quốc.</p>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-map-marker"></i>273 An Dương Vương</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+098-95-51-84</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>cook.shop@email.com</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xm-6">
+							<div class="footer">
+								<h3 class="footer-title">Sản phẩm</h3>
+								<ul class="footer-links">
+									<li><a href="#quick-sale">Sản phẩm bán chạy</a></li>
+									<li><a href="samsung1.html">Samsung</a></li>
+									<li><a href="iphone1.html">iPhone</a></li>
+									<li><a href="#hot-deal">Ưu đãi</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-xm-6">
+							<div class="footer">
+								<h3 class="footer-title">Thông tin</h3>
+								<ul class="footer-links">
+									<li><a href="#">Thông tin cửa hàng</a></li>
+									<li><a href="#">Cách thức liên hệ</a></li>
+									<li><a href="#">Chính sách bảo mật</a></li>
+									<li><a href="#">Điều kiện và điều khoản</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xm-6">
+							<div class="footer">
+								<h3 class="footer-title">Dịch Vụ</h3>
+								<ul class="footer-links">
+									<li><a href="#top-header">Tài khoản </a></li>
+									<li><a href="cart.html">Giỏ hàng</a></li>
+									<li><a href="#">Yêu thích</a></li>
+									<li><a href="#">Hỗ trợ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+							</ul>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cart.js"></script>
+		<script src="js/searchproduct.js"></script>
+		<script>
+			
+
+			let subMenu = document.getElementById("subMenu");
+			function toggleMenu(){
+			  subMenu.classList.toggle("open-menu");
+			}
+  
+		  </script>
+	</body>
+</html>

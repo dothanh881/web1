@@ -1,0 +1,48 @@
+.prod {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 15px ;
+}
+
+.header-search{
+    padding: 20px;
+    overflow-y: scroll ;
+    position: relative;
+}
+
+.header-search form{
+    width: 100%;
+    border-radius: 4px;
+    
+   
+}
+
+.header-search::-webkit-scrollbar{
+    display: none;
+}
+
+
+.product-listss{
+    padding: 20px 0;
+}
+.prod img{
+    width: 45x;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.prod .p-details h2{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.prod .p-details {
+    padding-left: 15px;
+}
+
+.prod:hover {
+    opacity: 0.8;
+
+}

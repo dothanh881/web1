@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán qua Ngân hàng AgriBank</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/napas.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/user.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	
+      <!-- Slick -->
+      <link type="text/css" rel="stylesheet" href="css/slick.css"/>
+      <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+      <!-- nouislider -->
+      <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+	  <link rel="stylesheet" href="css/searchproduct.css">
+</head>
+<body>
+
+
+    	<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header" class="user">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> +098-95-51-84</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> cook.shop@email.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> 273 An Dương Vương</a></li>
+					</ul>
+					<ul class="header-links pull-right ">
+						<li><a href="#"><i class="fa fa-money"></i> VND</a></li>
+						<li onclick="toggleMenu()"><img class="ava-user"  src="img/ava1.png"  alt="" > <a href="#">user1234</a></li>     
+						<div class="sub-menu-wrap" id="subMenu">
+						  <div class="sub-menu">
+							<div class="user-info">
+							  <img src="img/ava1.png" alt="">
+							  <h3>User1234</h3>
+							</div>
+		
+							<hr>
+		
+							<a href="profile.html" class="sub-menu-link">
+							  <img src="img/profile.png" alt="">
+							  <p>Chỉnh sửa hồ sơ</p>
+							  <span>></span>
+							</a>
+		
+							<a href="history.html" class="sub-menu-link">
+								<img src="img/history.png" alt="">
+								<p>Lịch sử mua hàng</p>
+								<span>></span>
+							  </a>
+					
+				
+							  <a href="#"  class="sub-menu-link" onclick="logout()">
+								<img src="img/logout.png" alt="">
+								<p>Đăng xuất</p>
+								<span>></span>
+							  </a>
+		
+						  </div>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+		
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="user.html" class="logo">
+									<img src="./img/logo.png" alt="logo" >
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+		
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<input class="input" id="search-item" placeholder="Bạn cần tìm gì?"
+									onkeyup="search()" >
+								<button class="search-btn">Tìm kiếm</button>
+								
+								</form>
+							
+									<div class="product-listss" id="product-listss">
+										<div class="prod">
+											<a href="product1.html"><img src="img/product01.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 14 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product1.html"><img src="img/product02.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 13 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product1.html"><img src="img/product03.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 12 Pro Max</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product1.html"><img src="img/product04.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 15 Pro Max</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product2.html"><img src="img/product05.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S23 Ultra</h2></a>
+											</div>
+										</div>
+										
+										<div class="prod">
+											<a href="product2.html"><img src="img/product06.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S21 5G</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product2.html"><img src="img/product07.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy Z Flip 4</h2></a>
+											</div>
+										</div>
+									
+										<div class="prod">
+											<a href="product2.html"><img src="img/product08.png" alt=""></a>
+											<div class="p-details">
+												<a href="product2.html"><h2>Samsung Galaxy S20 Ultra</h2></a>
+											</div>
+										</div>
+									
+
+										<div class="prod">
+											<a href="product1.html"><img src="img/product09.png" alt=""></a>
+											<div class="p-details">
+												<a href="product1.html"><h2>iPhone 11 Pro </h2></a>
+											</div>
+										</div>
+									</div>
+							
+								
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<span>Yêu thích</span>
+										<div class="qty">2</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<div>Giỏ hàng</div>
+										<span class="qty">0</span>
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+										</div>
+										<div class="cart-btns">
+											<a href="cart.html">Xem giỏ hàng</a>
+											<a href="checkout1.html">Thanh toán <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Danh mục</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+    
+    <div class="container maind">
+        <div class="row">
+            
+                <div class="col-md-4 order-details left ">
+                    <div class="section-title text-center">
+                        <h3 class="title">Đơn hàng của bạn</h3>
+                    </div>
+                    <div class="order-summary">
+                        <div class="order-col">
+                            <div><strong>SẢN PHẨM</strong></div>
+                            <div><strong>TỔNG</strong></div>
+                        </div>
+                        <div class="order-products">
+                        </div>
+                    </div>
+                  
+                   
+                </div>
+        
+
+
+
+
+            <div class="col-md-8 right">
+                <form id="paymentForm">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h3>Thanh toán qua ngân hàng Agribank</h3>
+                        <img class="imgbank" src="img/bankvisa.png" alt="">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="so-the">Số thẻ</label>
+                        <input type="text" class="form-control" id="so-the" name="so-the" placeholder="1234567890123456">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="mm-yy">MM/YY</label>
+                        <input type="text" class="form-control" id="mm-yy" name="mm-yy" placeholder="12/23">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="ngay-phat-hanh">Ngày phát hành</label>
+                        <input type="text" class="form-control" id="ngay-phat-hanh" name="ngay-phat-hanh" placeholder="12/2022">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="ten-chu-the">Tên chủ thẻ (không dấu)</label>
+                        <input type="text" class="form-control" id="ten-chu-the" name="ten-chu-the" placeholder="Nguyen Van A">
+                      </div>
+                    </div>
+                    
+                   
+                      <div class="checksubmit">
+                          <input  class="checks" type="checkbox" id="dieu-kien-su-dung" name="dieu-kien-su-dung">
+                          <label class="labels" for="dieu-kien-su-dung">Đồng ý với <a href="#">điều kiện sử dụng</a></label>
+                        </div>
+                    
+                     
+                    
+                    <div class="row">
+                      <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btnform">Xác thực</button>
+                        <button type="reset" class="btn btn-secondary btnform">Hủy</button>
+                      </div>
+                    </div>
+                
+                  </form>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+	<footer id="footer">
+		<!-- top footer -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					
+					<div class="col-md-3 col-xm-6">
+						<div class="footer">
+							<h3 class="footer-title">Thông tin</h3>
+							<p>Là cửa hàng bán điện thoại uy tín, chất lượng và chính hãng, có nhiều chi nhánh trên toàn quốc.</p>
+							<ul class="footer-links">
+								<li><a href="#"><i class="fa fa-map-marker"></i>273 An Dương Vương</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>+098-95-51-84</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>cook.shop@email.com</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-xm-6">
+						<div class="footer">
+							<h3 class="footer-title">Sản phẩm</h3>
+							<ul class="footer-links">
+								<li><a href="#quick-sale">Sản phẩm bán chạy</a></li>
+								<li><a href="samsung1.html">Samsung</a></li>
+								<li><a href="iphone1.html">iPhone</a></li>
+								<li><a href="#hot-deal">Ưu đãi</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-md-3 col-xm-6">
+						<div class="footer">
+							<h3 class="footer-title">Thông tin</h3>
+							<ul class="footer-links">
+								<li><a href="#">Thông tin cửa hàng</a></li>
+								<li><a href="#">Cách thức liên hệ</a></li>
+								<li><a href="#">Chính sách bảo mật</a></li>
+								<li><a href="#">Điều kiện và điều khoản</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-xm-6">
+						<div class="footer">
+							<h3 class="footer-title">Dịch Vụ</h3>
+							<ul class="footer-links">
+								<li><a href="#top-header">Tài khoản </a></li>
+								<li><a href="cart.html">Giỏ hàng</a></li>
+								<li><a href="#">Yêu thích</a></li>
+								<li><a href="#">Hỗ trợ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /top footer -->
+
+		<!-- bottom footer -->
+		<div id="bottom-footer" class="section">
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="footer-payments">
+							<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+							<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+							<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+							<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+							<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+							<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+						</ul>
+					</div>
+				</div>
+					<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /bottom footer -->
+	</footer>
+		<!-- /FOOTER -->
+
+
+        <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/searchproduct.js" ></script>
+		<script>
+			
+
+          let subMenu = document.getElementById("subMenu");
+          function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+          }
+
+		
+
+		  const form = document.getElementById('paymentForm');
+
+			form.addEventListener('submit', (event) => {
+			event.preventDefault();
+
+			const soThe = document.getElementById('so-the').value;
+			const mmYy = document.getElementById('mm-yy').value;
+			const ngayPhatHanh = document.getElementById('ngay-phat-hanh').value;
+			const tenChuThe = document.getElementById('ten-chu-the').value;
+			const dieuKienSuDung = document.getElementById('dieu-kien-su-dung').checked;
+
+			if (!soThe || !mmYy || !ngayPhatHanh || !tenChuThe || !dieuKienSuDung) {
+				alert('Vui lòng nhập đầy đủ thông tin và đồng ý với điều kiện sử dụng');
+				return;
+			}
+
+			alert('Bạn đã thanh toán thành công!');
+			});
+
+
+
+
+
+
+		</script>
+		<script src="js/cart.js"></script>
+
+    
+  
+</body>
+</html>

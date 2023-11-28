@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chỉnh sửa hồ sơ</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/user.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/searchproduct.css">
+
+ 
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header" class="user">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"><i class="fa fa-phone"></i> +098-95-51-84</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i> cook.shop@email.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i> 273 An Dương Vương</a></li>
+            </ul>
+            <ul class="header-links pull-right ">
+                <li><a href="#"><i class="fa fa-money"></i> VND</a></li>
+                <li onclick="toggleMenu()"><img class="ava-user"  src="img/ava1.png"  alt="" > <a href="#">user1234</a></li>     
+                <div class="sub-menu-wrap" id="subMenu">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <img src="img/ava1.png" alt="">
+                      <h3>User1234</h3>
+                    </div>
+
+                    <hr>
+
+                    <a href="profile.html" class="sub-menu-link">
+                      <img src="img/profile.png" alt="">
+                      <p>Chỉnh sửa hồ sơ</p>
+                      <span>></span>
+                    </a>
+
+                    <a href="history.html" class="sub-menu-link">
+                        <img src="img/history.png" alt="">
+                        <p>Lịch sử mua hàng</p>
+                        <span>></span>
+                      </a>
+            
+        
+                  	<a href="#"  class="sub-menu-link" onclick="logout()">
+                        <img src="img/logout.png" alt="">
+                        <p>Đăng xuất</p>
+                        <span>></span>
+                      </a>
+
+                  </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3">
+                    <div class="header-logo">
+                        <a href="user.html" class="logo">
+                            <img src="./img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+                <!-- SEARCH BAR -->
+                <div class="col-md-6">
+                    <div class="header-search">
+                        <form>
+                            <input class="input" id="search-item" placeholder="Bạn cần tìm gì?"
+                            onkeyup="search()" >
+                        <button class="search-btn">Tìm kiếm</button>
+                        
+                        </form>
+                    
+                            <div class="product-listss" id="product-listss">
+                                <div class="prod">
+                                    <a href="product1.html"><img src="img/product01.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product1.html"><h2>iPhone 14 Pro Max</h2></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="prod">
+                                    <a href="product1.html"><img src="img/product02.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product1.html"><h2>iPhone 13 Pro Max</h2></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="prod">
+                                    <a href="product1.html"><img src="img/product03.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product1.html"><h2>iPhone 12 Pro Max</h2></a>
+                                    </div>
+                                </div>
+                            
+                                <div class="prod">
+                                    <a href="product1.html"><img src="img/product04.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product1.html"><h2>iPhone 15 Pro Max</h2></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="prod">
+                                    <a href="product2.html"><img src="img/product05.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product2.html"><h2>Samsung Galaxy S23 Ultra</h2></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="prod">
+                                    <a href="product2.html"><img src="img/product06.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product2.html"><h2>Samsung Galaxy S21 5G</h2></a>
+                                    </div>
+                                </div>
+                            
+                                <div class="prod">
+                                    <a href="product2.html"><img src="img/product07.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product2.html"><h2>Samsung Galaxy Z Flip 4</h2></a>
+                                    </div>
+                                </div>
+                            
+                                <div class="prod">
+                                    <a href="product2.html"><img src="img/product08.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product2.html"><h2>Samsung Galaxy S20 Ultra</h2></a>
+                                    </div>
+                                </div>
+                            
+
+                                <div class="prod">
+                                    <a href="product1.html"><img src="img/product09.png" alt=""></a>
+                                    <div class="p-details">
+                                        <a href="product1.html"><h2>iPhone 11 Pro Max</h2></a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        
+                    </div>
+                </div>
+                <!-- /SEARCH BAR -->
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                        <!-- Wishlist -->
+                        <div>
+                            <a href="#">
+                                <i class="fa fa-heart-o"></i>
+                                <span>Yêu thích</span>
+                                <div class="qty">2</div>
+                            </a>
+                        </div>
+                        <!-- /Wishlist -->
+
+                        <!-- Cart -->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Giỏ hàng</span>
+                                <div class="qty">4</div>
+                            </a>
+                            <div class="cart-dropdown">
+                                <div class="cart-list">
+                                    <div class="product-widget">
+                                        <div class="product-img">
+                                            <img src="./img/product01.png" alt="">
+                                        </div>
+                                        <div class="product-body">
+                                            <h3 class="product-name"><a href="#">iPhone 14 Pro Max 256GB</a></h3>
+                                            <h4 class="product-price"><span class="qty">1x</span>27.090.000₫</h4>
+                                        </div>
+                                        <button class="delete"><i class="fa fa-close"></i></button>
+                                    </div>
+
+                                    <div class="product-widget">
+                                        <div class="product-img">
+                                            <img src="./img/product02.png" alt="">
+                                        </div>
+                                        <div class="product-body">
+                                            <h3 class="product-name"><a href="#">iPhone 13 Pro Max 512GB</a></h3>
+                                            <h4 class="product-price"><span class="qty">3x</span>23.990.000₫</h4>
+                                        </div>
+                                        <button class="delete"><i class="fa fa-close"></i></button>
+                                    </div>
+                                </div>
+                                <div class="cart-summary">
+                                    <small>4 sản phẩm được chọn</small>
+                                    <h5>TỔNG: 99.060.000₫</h5>
+                                </div>
+                                <div class="cart-btns">
+                                    <a href="cart.html">Xem giỏ hàng</a>
+                                    <a href="checkout.html">Thanh toán <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Cart -->
+
+                        <!-- Menu Toogle -->
+                        <div class="menu-toggle">
+                            <a href="#">
+                                <i class="fa fa-bars"></i>
+                                <span>Danh mục</span>
+                            </a>
+                        </div>
+                        <!-- /Menu Toogle -->
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+
+
+
+<div class="container ">
+  
+<h3 class="headd">Chỉnh sửa hồ sơ</h3>
+  <div class="col-md-12">
+    <div class="tab-content ">
+      <div class="tab-pane fade active in" id="account-general">
+        <div class="panel panel-default">
+          <div class="panel-body media align-items-center ava">
+            <div class="img">
+                <img src="img/ava1.png" alt class="d-block ui-w-80">
+            </div>
+            <div class="media-body ml-4 upload">
+              <label for="account-settings-fileinput" class="btn btn-primary">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                Tải lên ảnh mới
+                <input type="file" id="account-settings-fileinput" class="account-settings-fileinput">
+              </label> &nbsp;
+              <button type="button" class="btn btn-default md-btn-flat">Làm mới</button>
+              <div class="text-light small mt-1"><p class="idd">Chỉ được phép tải lên ảnh JPG, GIF hoặc PNG. Kích thước tối đa 800K</p></div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <div class="form-group">
+              <label class="control-label">Tên đăng nhập</label>
+              <input type="text" class="form-control" value="user1234">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Tên</label>
+              <input type="text" class="form-control" value="User1234">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Email</label>
+              <input type="text" class="form-control" value="user@mail.com">
+              <div class="alert alert-warning mt-3">
+                Email chưa được xác nhận. Vui lòng kiểm tra hộp thư đến.<br>
+                Gửi lại xác nhận
+              </div>
+            </div>
+            
+
+            <div class="text-right mt-3">
+              <button type="button" class="btn btn-primary">Lưu thay đổi</button>&nbsp;
+              <button type="button" class="btn btn-default">Hủy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+    <!-- top footer -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                
+                <div class="col-md-3 col-xm-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Thông tin</h3>
+                        <p>Là cửa hàng bán điện thoại uy tín, chất lượng và chính hãng, có nhiều chi nhánh trên toàn quốc.</p>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-map-marker"></i>273 An Dương Vương</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+098-95-51-84</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>cook.shop@email.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xm-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Sản phẩm</h3>
+                        <ul class="footer-links">
+                            <li><a href="#quick-sale">Sản phẩm bán chạy</a></li>
+                            <li><a href="samsung1.html">Samsung</a></li>
+                            <li><a href="iphone1.html">iPhone</a></li>
+                            <li><a href="#hot-deal">Ưu đãi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-xm-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Thông tin</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Thông tin cửa hàng</a></li>
+                            <li><a href="#">Cách thức liên hệ</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều kiện và điều khoản</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xm-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Dịch Vụ</h3>
+                        <ul class="footer-links">
+                            <li><a href="#top-header">Tài khoản </a></li>
+                            <li><a href="cart.html">Giỏ hàng</a></li>
+                            <li><a href="#">Yêu thích</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /top footer -->
+
+    <!-- bottom footer -->
+    <div id="bottom-footer" class="section">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="footer-payments">
+                        <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                        <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+                <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /bottom footer -->
+</footer>
+<!-- /FOOTER -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/searchproduct.js"></script>
+<script>
+    let subMenu = document.getElementById("subMenu");
+function toggleMenu(){
+subMenu.classList.toggle("open-menu");
+}
+
+</script>
+
+
+</body>
+</html>
