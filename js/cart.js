@@ -24,7 +24,8 @@ productElements.forEach((element) => {
     }
   }
 });
-var addToCartElement = document.querySelectorAll('.add-to-cart');
+console.log(products)
+var addToCartElement = document.querySelectorAll('.product-body');
 addToCartElement.forEach(function(element){
   var dataId = element.parentElement.getAttribute('data-id');
   element.addEventListener("click", () => {
@@ -228,4 +229,3 @@ cartInputNumbers.forEach((input) => {
 onLoadCartNumber();
 displayCart();
 displayCheckout();
-displayCartDrop()

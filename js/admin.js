@@ -14,13 +14,59 @@ $(document).ready(function(){
    
 
 
-    function themSanPham() {
+    function themnguoiDung() {
+  // Kiểm tra tên người dùng
+  var tenNguoiDung = document.getElementById("maspThem").value;
+  if (tenNguoiDung == "") {
+    alert("Vui lòng nhập tên người dùng");
+    return;
+  }
 
-     
-     
+  // Kiểm tra email
+  var email = document.getElementById("emailThem").value;
+  if (email == "") {
+    alert("Vui lòng nhập email");
+    return;
+  }
+
+  // Kiểm tra số điện thoại
+    var soDienThoai = document.getElementById("soDienThoaiThem").value;
+  if (isNaN(soDienThoai)) {
+    alert("Số điện thoại phải là dữ liệu số");
+    return;
+  }
+
+  // Kiểm tra hình
+  var anhDaiDien = document.getElementById("anhDaiDienSanPhamThem").src;
+  if (anhDaiDien == "") {
+    alert("Vui lòng chọn hình ảnh");
+    return;
+  }
+
   
-            // Alert success
-      alert('Thêm thành công!!');
+
+  // Kiểm tra tài khoản
+  var taiKhoan = document.getElementById("taiKhoanThem").value;
+  if (taiKhoan == "") {
+    alert("Vui lòng nhập tài khoản");
+    return;
+  }
+
+  // Kiểm tra mật khẩu
+  var matKhau = document.getElementById("matKhauThem").value;
+  var matKhauNhapLai = document.getElementById("matKhauNhapLaiThem").value;
+  if (matKhau == "") {
+    alert("Vui lòng nhập mật khẩu");
+    return;
+  }
+
+  if (matKhau != matKhauNhapLai) {
+    alert("Mật khẩu nhập lại không khớp");
+    return;
+  }
+
+  // Nếu tất cả các trường đều được điền đầy đủ thì thông báo nhập thành công
+  alert("Thêm thành công!!");
 
       // Close the overlay
       document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
@@ -67,5 +113,6 @@ function suaSanPham(masp) {
   // Ẩn khung sửa sản phẩm
   document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
 }
+
 
 

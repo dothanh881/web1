@@ -459,6 +459,7 @@
         margin: 50px auto;
         width: auto;
         background-color: #ffffff;
+        position: relative;
     }
 
     .overlayTable td:first-child {
@@ -478,22 +479,20 @@
 
     .close {
         /* nút tắt form */
-        position: fixed;
-        top: 5px;
-        right: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
         font-size: 3rem;
         width: 1em;
         height: 1em;
         line-height: 1em;
         text-align: center;
-        color: #aaa;
+        color: #000000;
         cursor: pointer;
         transition: .2s ease;
     }
 
     .close:hover {
-        color: #fff;
-        background-color: #f33;
         border-radius: 50%;
     }
 
@@ -799,3 +798,128 @@
     .btnsearch{
         margin-bottom: 20px;
     }
+
+
+    /* CSS for user role selection */
+.user_role {
+    margin: 20px 0;
+  }
+  
+  .user_role select {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* CSS for user management table */
+  .table-wrapper {
+    overflow: auto;
+  }
+  
+  /* .table-title {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+  }
+   */
+  .table-title .col-sm-5 {
+    text-align: left;
+  }
+  
+  .table-title .col-sm-7 {
+    text-align: right;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #eeeeee;
+  }
+  
+  /* .btn.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  } */
+  
+  .btn i {
+    margin-right: 5px;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+  }
+  
+  table.table tr th,
+  table.table tr td {
+    padding: 10px;
+   
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .status.text-success {
+    background-color: #28a745;
+  }
+  
+    .status.text-secondary {
+        background-color: #575656;
+    }
+    
+  .settings {
+    color: #337ab7;
+  }
+  
+  .settings:hover {
+    color: #2e6da9;
+  }
+
+  .search-advance{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+    
+  }
+
+  .user_role{
+    margin-right: 20px;
+    margin-left: 50px;
+    padding: 5px 30px;
+ 
+  }
+
+  /* CSS for user role selection */
+.container-fluid .row.search-advance {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .user_role {
+    flex: 1;
+    margin: 20px 0;
+  }
+  
+  .user_role select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+ 

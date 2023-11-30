@@ -101,11 +101,40 @@
 
           </div>
 
-          
+          <div class="container-fluid ">
+            <div class="row search-advance">
+      
+              <div class="col-md-4 user_role">
+                <select name="vaiTro" id="vaiTroThem">
+                  <option value>Chọn vai trò</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Technician">Kĩ thuật viên</option>
+                  <option value="maintainer">Người bảo trì</option>
+                </select>
+  
+              
+              </div>
+                <div class="col-md-4 user_role">
+                  <select name="trangThai" id="trangThaiThem">
+                    <option value>Chọn trạng thái</option>
+                    <option value="active">Đang hoạt động</option>
+                    <option value="inactive">Không hoạt động</option>
+                  </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            
+            
+
+
+            
+         
+            
+
 
                <div class="container ">
                 <div class="table-responsive">
-                    <div class="table-wrapper sect1">
+                    <div class="table-wrapper sect1 "  id="bangNguoiDung">
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-5">
@@ -121,18 +150,20 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Họ tên</th>						
-                                    <th>Ngày tạo</th>
+                                    <th>Tên người dùng</th>						
+                                    <th>Email</th>
                                     <th>Vai trò</th>
                                     <th>Trạng thái</th>
-                                    <th>Hành động</th>
+                                    <th>Chỉnh sửa</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td><a href="#"><img src="/img/ava2.jpg" class="avatar" alt="Avatar"> Đỗ Phú Thành</a></td>
-                                    <td>04/10/2023</td>                        
+                                    <td><a href="#"><img src="/img/ava2.jpg" class="avatar" alt="Avatar"> Đỗ Phú Thành</a>
+                                    
+                                    </td>
+                                    <td>thanhdp881@gmail.com</td>                        
                                     <td>Admin</td>
                                     <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
                                     <td>
@@ -143,8 +174,8 @@
                                 <tr>
                                   <td>2</td>
                                   <td><a href="#"><img src="/img/ava3.jpg" class="avatar" alt="Avatar"> Nguyễn Ngọc Nhiên</a></td>
-                                  <td>05/11/2023</td>                        
-                                  <td>Khách hàng</td>
+                                  <td>ngnhien51@gmail.com</td>                        
+                                  <td>Người bảo trì</td>
                                   <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
                                   <td>
                                       <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
@@ -154,8 +185,8 @@
                               <tr>
                                 <td>3</td>
                                 <td><a href="#"><img src="/img/ava4.png" class="avatar" alt="Avatar" > Huỳnh Duy Khang</a></td>
-                                <td>09/10/2023</td>                        
-                                <td>Khách hàng</td>
+                                <td>khangdh2@gmail.com</td>                        
+                                <td>Kĩ thuật viên</td>
                                 <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
                                 <td>
                                     <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
@@ -164,10 +195,10 @@
                             </tr>
                             <tr>
                               <td>4</td>
-                              <td><a href="#"><img src="/img/ava5.png" class="avatar" alt="Avatar" > Nguyễn Văn Nam</a></td>
-                              <td>01/12/2023</td>                        
-                              <td>Khách hàng</td>
-                              <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
+                              <td><a href="#"><img src="/img/ava5.png" class="avatar" alt="Avatar" >Nguyễn Đông</a></td>
+                              <td>kdsd@gmai.com</td>                        
+                              <td>Admin</td>
+                              <td><span class="status text-secondary">&bull;</span> Không hoạt động</td>
                               <td>
                                   <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
     
@@ -175,10 +206,10 @@
                           </tr>
                           <tr>
                             <td>5</td>
-                            <td><a href="#"><img src="/img/ava6.png" class="avatar" alt="Avatar" > Đỗ Văn Khang</a></td>
-                            <td>02/10/2023</td>                        
-                            <td>Khách hàng</td>
-                            <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
+                            <td><a href="#"><img src="/img/ava6.png" class="avatar" alt="Avatar" >Trần Gia Huy</a></td>
+                            <td>hudsf@gmail.com</td>                        
+                            <td>Người bảo trì</td>
+                            <td><span class="status text-secondary">&bull;</span> Không hoạt động</td>
                             <td>
                                 <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
   
@@ -187,7 +218,7 @@
                                
                             </tbody>
                         </table>
-                        <div class="clearfix">
+                        <!-- <div class="clearfix">
                             <ul class="pagination">
                                 <li class="page-item disabled"><a href="#">Trước</a></li>
                                 <li  class="page-item active"><a href="#" class="page-link">1</a></li>
@@ -196,7 +227,7 @@
                                
                                 <li class="page-item"><a href="#" class="page-link">Tiếp</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>    
@@ -220,21 +251,33 @@
         </div>
 
       <div id="khungThemSanPham" class="overlay">
-        <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+     
         <table class="overlayTable table-outline table-content table-header">
+          <thead>
+            <th class="tilt" colspan="2"> Thêm người dùng
+              <button  class="close">
+               ×
+              </button> 
+            </th>
+          </thead>
             <tbody>
               <tr>
-                <th class="tilt" colspan="2"> Thêm người dùng</th>
+               
+                
             </tr>
             <tr>
-                <td>Tên người dùng</td>
+                <td>Tên người dùng:</td>
                 <td><input type="text" id="maspThem"></td>
             </tr>
             <tr>
                 <td>Email: </td>
-                <td><input type="text"></td>
+                <td><input type="email" id="emailThem"></td>
             </tr>
-            
+            <tr>
+              <td>Số điện thoại:</td>
+              <td><input type="text" id="soDienThoaiThem"></td>
+          </tr>
+
             <tr>
                 <td>Hình:</td>
                 <td>
@@ -244,32 +287,53 @@
             </tr>
 
             <tr>
-              <td>Vai trò</td>
-              <td><input type="text"></td>
+              <td>Vai trò:</td>
+              <td>
+                <select name="" id="vaiTroThem">
+                  <option value="">Admin</option>
+                  <option value="">Kỹ thuật viên</option>
+                  <option value="">Người bảo trì</option>
+                </select>
+              </td>
           </tr>
 
             <tr>
-                <td>Tài Khoản</td>
-                <td><input type="text"></td>
+                <td>Tài Khoản:</td>
+                <td><input type="text" id="taiKhoanThem"></td>
             </tr>
             
             <tr>
                
             </tr>
             <tr>
-                <td>Mật khẩu</td>
-                <td><input type="text" placeholder=""></td>
+                <td>Mật khẩu:</td>
+                <td><input type="password" placeholder="" id="matKhauThem"></td>
             </tr>
+
+            <tr>
+              <td>Nhập lại mật khẩu:</td>
+              <td><input type="password" placeholder="" id="matKhauNhapLaiThem"></td>
+          </tr>
          
-                <td colspan="2" class="table-footer"> <button onclick="themSanPham()">THÊM</button> </td>
+                <td colspan="2" class="table-footer"> <button onclick="themnguoiDung()">THÊM</button> </td>
             </tr>
         </tbody></table>
     </div>
 
-    <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
-      <table class="overlayTable table-outline table-content table-header">
-          <tbody><tr>
-              <th class="tilt" colspan="2">Sửa thông tin người dùng</th>
+    
+      
+      <form action="" >
+        <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
+        <table class="overlayTable table-outline table-content table-header">
+          <tbody>
+            <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+            <tr>
+              
+              
+               
+              
+              <th class="tilt" colspan="2">Sửa thông tin người dùng </th>
+              
           </tr>
           <tr>
               <td>Tên người dùng:</td>
@@ -288,7 +352,13 @@
           
           <tr>
               <td>Vai trò:</td>
-              <td><input type="text" value="Khách hàng"></td>
+              <td>
+                <select name="" id="">
+                  <option value="0">Admin</option>
+                  <option value="1">Kĩ thuật viên</option>
+                  <option value="1">Người bảo trì</option>
+                </select>
+              </td>
           </tr>
        
         
@@ -304,7 +374,10 @@
           </tr>
       </tbody>
       </table>
-      </div>
+    </div>
+      </form>
+      
+      
 
 
 
@@ -313,9 +386,11 @@
 
       <script src="/js/jquery.min.js"></script>
       <script src="/js/admin.js"></script>
-
-
-
+      <script>
+        document.querySelector('.close').addEventListener('click', function() {
+          document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
+        });
+      </script>
 
 
 
