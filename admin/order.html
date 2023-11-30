@@ -92,6 +92,8 @@
 			<div class="order">
 			  <div class="row">
 		
+         
+
 				<div class="col-md-6 col-lg-4 form-group date-check">
 				  <label for="datefrom">Bắt đầu từ</label>
 				  <input type="date" id="datefrom" name="datefrom" class="form-control">
@@ -102,7 +104,22 @@
 				  <input type="date" id="dateto" name="dateto" class="form-control">
 				</div>
 			  </div>
-			  <button class="btn btn-primary text-center active  col-sm-2 btnsearch" type="button">Tìm kiếm</button>
+
+        <div class="row">
+
+          <div class=" col-md-4 col-lg-3 search-p ">
+            <div id="DataTables_Table_0_filter" class="dataTables_filter">
+              <label><input type="search" class="form-control" placeholder="Mã đơn hàng" aria-controls="DataTables_Table_0">
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 search-btnn ">
+            <button class="dt-button add-new btn btn-primary" type="button"><span><span class="d-none d-sm-inline-block">Tìm kiếm</span></span></button>
+          </div>
+         
+        </div>
+      
 			
 
 			</div>
@@ -124,8 +141,8 @@
                         <thead>
                             <tr>
                                 <th>Mã đơn hàng</th>
-                                <th>Ngày thực hiện</th>						
-                                <th>Email thực hiện</th>
+                                <th>Ngày đặt hàng</th>						
+                                <th>Địa chỉ nhận hàng</th>
                                 <th>Tổng tiền</th>
                                 <th>Trạng thái</th>
                                 <th></th>
@@ -135,9 +152,11 @@
                             <tr>
                                 <td>GHTK-1606070005</td>             
                                 <td>04/10/2023</td>
-                                <td>hdkhang@gmail.com</td>                        
+                                <td>36/20 Lê Ngã, Phú Trung, Tân Phú, TP.HCM</td>                        
                                 <td>32.000.000đ</td>
-                                <td><span class="status text-success">&bull;</span> Đã thanh toán</td>
+                                <td>
+                                  <span class="badge px-2 rounded-pill bg-label-success" text-capitalized="">Đã giao hàng</span></td>
+                                
                                 <td>
                                     <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
       
@@ -147,11 +166,14 @@
                             <tr>
                                 <td>GHTK-1606070011</td>             
                                 <td>26/11/2023</td>
-                                <td>nhienguyen@gmail.com</td>                        
+                                <td>273 An Dương Vương, phường 3, Quận 5, TP.HCM</td>                      
                                 <td>20.000.000đ</td>
-                                <td><span class="status text-danger">&bull;</span> Đã hủy</td>
                                 <td>
-                                    <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
+                                  <span class="badge px-2 rounded-pill bg-label-danger" >Đã hủy</span></td>
+                                
+                              
+                                <td>
+                                    <a href="#" onclick="document.getElementById('khungSuaSanPham1').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
       
                                 </td>
                             </tr>
@@ -159,9 +181,10 @@
                             <tr>
                                 <td>GHTK-1606070235</td>             
                                 <td>2/12/2023</td>
-                                <td>dpthanh@gmail.com</td>                        
+                                <td>50/42 Âu Cơ, Trần Văn Quang, Tân Phú, TP.HCM</td>                    
                                 <td>23.000.000đ</td>
-                                <td><span class="status text-primary">&bull;</span> Đang vận chuyển</td>
+                                <td>
+                                  <span class="badge px-2 rounded-pill bg-label-primary" >Đang vận chuyển</span></td>
                                 <td>
                                     <a href="#" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
       
@@ -169,11 +192,13 @@
                             </tr>
 
                             <tr>
-                                <td>GHTK-1606071505</td>             
+                                <td >GHTK-1606071505</td>             
                                 <td>01/12/2023</td>
-                                <td>ngvana@gmail.com</td>                        
+                                <td>45/24 Trịnh Đình Trọng, Phú Trung, Tân Phú, TP.HCM</td>                        
                                 <td>31.000.000đ</td>
-                                <td><span class="status text-warning">&bull;</span> Chờ thanh toán</td>
+
+                                <td>
+                                  <span class="badge px-2 rounded-pill bg-label-warning" >Chờ thanh toán</span></td>
                                 <td>
                                     <a href="#"  onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" class="settings" title="Xem chi tiết" data-toggle="tooltip" ><i class="fa fa-eye"></i></a>
       
@@ -199,8 +224,12 @@
 
         
 
-        <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+        <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
             <div class="card overlayTable">
+              <button class="close">×</button> 
+              
+             
+              
                 <div class="title">Chi tiết đơn hàng</div>
                 <div class="info">
                     <div class="row">
@@ -257,7 +286,68 @@
             
                    
                 </div>
-            </div>
+        </div>
+
+
+        <div id="khungSuaSanPham1" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+          <div class="card overlayTable">
+              <div class="title">Chi tiết đơn hàng</div>
+              <div class="info">
+                  <div class="row">
+                      <div class="col-7 pull-left">
+                          <span id="heading">Ngày</span><br>
+                          <span id="details">16-11-2023</span>
+                      </div>
+                      <div class="col-5 pull-right">
+                          <span id="heading">Mã đơn hàng</span><br>
+                          <span id="details">GHTK-1606070005</span>
+                      </div>
+                  </div>      
+              </div>      
+              <div class="pricing">
+                  <div class="row">
+                      <div class="col-md-9 pull-left">
+                          <span id="name">iPhone 14 Pro Max</span>  
+                      
+                      </div>
+                      <div class="col-md-3 pull-right">
+                          <span id="price">35.000.000đ</span>
+                      </div>
+                  </div>
+
+                  
+                  <div class="row">
+                      <div class="col-md-9 pull-left">
+                          <span id="name">Ship</span>
+                      </div>
+                      <div class="col-md-3 pull-right">
+                          <span id="price">0đ</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="total">
+                  <div class="row">
+                      <div class="col-9"></div>
+                      <div class="col-3 pull-right"><big>35.000.000đ</big></div>
+                  </div>
+              </div>
+              <div class="tracking">
+                  <div class="title">Theo dõi đơn hàng</div>
+              </div>
+              <div class="progress-track">
+                <ul id="progressbar">
+                  <li class="step0 active " id="step1">Đã hủy</li>
+                  <li class="step0 active text-center" id="step2"></li>
+                  <li class="step0 active text-right" id="step3"></li>
+                  <li class="step0 active text-right" id="step4"></li>
+              </ul>
+              </div>
+              
+  
+          
+                 
+              </div>
+      </div>
         </div>
 
 

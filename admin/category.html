@@ -132,21 +132,51 @@
             </div>
           </div>
         </div> -->
-     
-       
-            <div class="container mb-3  ">
-             
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <h2>Quản lí sản phẩm</h2>
+              </div>
             
-              <div class="table-responsive">
+          </div>
+          
+          <div class="row">
+
+            <div class="col-md-3 category-search">
+                    
+             
+              <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm" aria-controls="DataTables_Table_0">
+          
+              
+      
+        </div>
+
+            <div class="col-md-4">
+              <button class="dt-button add-new btn btn-primary ms-n1" onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; " tabindex="0"  type="button" data-bs-target="#offcanvasEcommerceCategoryList"><span><i class="fa fa-plus-square"></i><span class="d-none d-sm-inline-block">Thêm sản phẩm</span></span></button>
+            </div>
+          </div>
+        </div>
+       
+       
+            <div class="container">
+           
+               
+        
+            
+              <div class="table">
+                
                 <table class="table table-bordered bg  table-hover" id="render">
+                 
                   <thead class="bg-head" >
                     <tr>
-                      <th class="text-center">#</th>
+                  
                       <th class="text-center">Mã sản phẩm</th>
                       <th class="text-center">Sản phẩm</th>
                       <th class="text-center">Tên</th>
                       <th class="text-center">Giá</th>
-                      <th class="text-center">Khuyến mãi</th>
+                      <th class="text-center">Số lượng</th>
                       <th class="text-center">Hành động</th>
                       
                    
@@ -154,12 +184,12 @@
                 </thead>
                 <tbody>
                   <tr class="text-center">
-                    <td>1</td>
+              
                     <td id="masp" data-masp="IP0">IP0</td>
                     <td><img src="/img/product01.png" alt=""></td>
                     <td>iPhone 14 PRO MAX</td>
                     <td>27.090.000đ</td>
-                    <td>Góp 30%</td>
+                    <td><span>120</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -177,12 +207,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>2</td>
+                
                     <td id="masp" data-masp="IP1">IP1</td>
                     <td><img src="/img/product02.png" alt=""></td>
                     <td>iPhone 13 PRO MAX</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>23.990.000đ</td>
+                    <td><span>10</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -199,12 +229,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>3</td>
+                  
                     <td id="masp" data-masp="IP2">IP2</td>
                     <td><img src="/img/product03.png" alt=""></td>
                     <td>iPhone 12 PRO MAX</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 30%</td>
+                    <td>17.490.000đ</td>
+                    <td><span>51</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -220,12 +250,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>4</td>
+                
                     <td id="masp" data-masp="IP3">IP3</td>
                     <td><img src="/img/product04.png" alt=""></td>
                     <td>iPhone 15 PRO MAX</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>33.590.000đ</td>
+                    <td><span>142</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -242,12 +272,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>5</td>
+                 
                     <td id="masp" data-masp="SS0">SS0</td>
                     <td><img src="/img/product05.png" alt=""></td>
                     <td>Samsung Galaxy S23 Ultra</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>31.990.000đ</td>
+                    <td><span>63</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -264,12 +294,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>6</td>
+                 
                     <td id="masp" data-masp="SS1">SS1</td>
                     <td><img src="/img/product06.png" alt=""></td>
                     <td>Samsung Galaxy S21 5G</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>10.590.000đ</td>
+                    <td><span>156</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -286,12 +316,12 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>7</td>
+                
                     <td id="masp" data-masp="SS2">SS2</td>
                     <td><img src="/img/product07.png" alt=""></td>
                     <td>Samsung Galaxy Z Flip 4</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>12.890.000đ</td>
+                    <td><span>41</span></td>
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -308,12 +338,13 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>8</td>
+               
                     <td id="masp" data-masp="SS3">SS3</td>
                     <td><img src="/img/product08.png" alt=""></td>
                     <td>Samsung Galaxy S20 Ultra</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>9.990.000đ</td>
+                    <td><span>22</span></td>
+                  
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -330,12 +361,13 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td>9</td>
+               
                     <td id="masp" data-masp="IP4">IP4</td>
                     <td><img src="/img/product09.png" alt=""></td>
                     <td>iPhone 11 PRO MAX</td>
-                    <td>27.090.000đ</td>
-                    <td>Góp 0%</td>
+                    <td>10.000.000đ</td>
+                    <td><span>11</span></td>
+                   
                     <td >
                       <div class="act-function">
                         <div class="tool">
@@ -358,27 +390,37 @@
           
             </div>
 
-            <div class="table-footer">
-              <!-- <select name="kieuTimSanPham">
-                  <option value="ma">Tìm theo mã</option>
-                  <option value="ten">Tìm theo tên</option>
-              </select>
-              <input type="text" placeholder="Tìm kiếm..." > -->
-              <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; ">
-                  <i class="fa fa-plus-square"></i>
-                  Thêm sản phẩm
-              </button>
-          </div>
+           
           
 
 
               <div id="khungThemSanPham" class="overlay">
-                  <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+                 
                   <table class="overlayTable table-outline table-content table-header">
-                      <tbody>
-                        <tr>
-                          <th class="tilt" colspan="2">Thêm Sản Phẩm</th>
-                      </tr>
+                    <thead>
+
+                      <th class="tilt" colspan="2">Thêm Sản Phẩm
+                      
+                         <button class="close" >
+                          ×
+                         </button>
+
+                      </th>
+                    </thead> 
+                    
+                    <tbody>
+                        
+                          <tr>
+                            <td>Hãng:</td>
+                            <td>
+                                <select>
+                                  <option value="Apple" selected>Apple</option>
+                                  <option value="Samsung">Samsung</option>
+                                 
+                                </select>
+                            </td>
+                        </tr>
+                      
                       <tr>
                           <td>Mã sản phẩm:</td>
                           <td><input type="text" id="maspThem"></td>
@@ -403,10 +445,7 @@
                       <tr>
                         
                       </tr>
-                      <tr>
-                          <td>Giá trị khuyến mãi:</td>
-                          <td><input type="text" placeholder="" id="giakhuyenmaithem"></td>
-                      </tr>
+                     
                     
           
                       <tr>
@@ -418,7 +457,7 @@
                           <td><input type="text" id="bonhotrongthem"></td>
                       </tr>
                       <tr>
-                          <td>Thẻ nhớ:</td>
+                          <td>Độ phân giải:</td>
                           <td><input type="text" id="thenho"></td>
                       </tr>
                       <tr>
@@ -432,18 +471,27 @@
               </div>
 
 
-  <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+  <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
     <table class="overlayTable table-outline table-content table-header">
-        <tbody><tr>
-            <th class="tilt" colspan="2">iPhone 14 Pro Max</th>
+        
+      <thead>
+        <th class="tilt" colspan="2">iPhone 13 Pro Max
+         <button  class="close">×</button>
+        </th>
+
+
+      </thead>
+      
+      <tbody><tr>
+            
         </tr>
         <tr>
             <td>Mã sản phẩm:</td>
-            <td><input type="text" value="iPhone"></td>
+            <td><input type="text" value="IP1"></td>
         </tr>
         <tr>
-            <td>Tên sẩn phẩm:</td>
-            <td><input type="text" value="iPhone 14 Pro Max"></td>
+            <td>Tên sản phẩm:</td>
+            <td><input type="text" value="iPhone 13 Pro Max"></td>
         </tr>
         <tr>
             <td>Hãng:</td>
@@ -458,21 +506,18 @@
         <tr>
             <td>Hình:</td>
             <td>
-                <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product01.png" >
+                <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product02.png" >
                 <input type="file" accept="image/* ">
             </td>
         </tr>
         
         
-        <tr>
-            <td>Giá trị khuyến mãi:</td>
-            <td><input type="text" value=""></td>
-        </tr>
+       
      
       
         <tr>
             <td>RAM:</td>
-            <td><input type="text" value="32 GB"></td>
+            <td><input type="text" value="8 GB"></td>
         </tr>
         <tr>
             <td>Bộ nhớ trong:</td>
@@ -480,8 +525,14 @@
         </tr>
         
         <tr>
+          <td>Độ phân giải:</td>
+          <td><input type="text" value="2796 x 1290 Pixels"></td>
+      </tr>
+      
+        
+        <tr>
             <td>Dung lượng Pin:</td>
-            <td><input type="text" value="4323 mAh"></td>
+            <td><input type="text" value="4440 mAh"></td>
         </tr>
         <tr>
             <td colspan="2" class="table-footer"> <button onclick="suaSanPham('IP0')">SỬA</button> </td>
@@ -499,7 +550,14 @@
       <script src="/js/admin.js"></script>
      
 
-
+      <script>
+        document.querySelectorAll('.close').forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+          const overlay = closeButton.closest('.overlay');
+          overlay.style.transform = 'scale(0)';
+        });
+      });
+      </script>
 
 
 

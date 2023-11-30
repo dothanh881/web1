@@ -59,7 +59,7 @@
               </div>
               
             
-          
+      
               <div class="search">
               <i class="fa fa-search" aria-hidden="true"></i>
               <input type="text" placeholder="Tìm kiếm">
@@ -104,7 +104,7 @@
           <div class="container-fluid ">
             <div class="row search-advance">
       
-              <div class="col-md-4 user_role">
+              <div class="col-md-3 user_role">
                 <select name="vaiTro" id="vaiTroThem">
                   <option value>Chọn vai trò</option>
                   <option value="Admin">Admin</option>
@@ -114,15 +114,31 @@
   
               
               </div>
-                <div class="col-md-4 user_role">
+                <div class="col-md-3 user_role">
                   <select name="trangThai" id="trangThaiThem">
                     <option value>Chọn trạng thái</option>
                     <option value="active">Đang hoạt động</option>
                     <option value="inactive">Không hoạt động</option>
                   </select>
                 </div>
-                <div class="col-md-4"></div>
+
+                <div class="col-md-3 user_search">
+                    
+                    
+                      <input  type="search" class="form-control" placeholder="Tên người dùng..." aria-controls="DataTables_Table_0">
+
+                  
+                  
+              
+                </div>
+                
+                  <div class="col-md-2 btn-search">
+                    <a href="#" class="btn btn-primary btn- active " role="button" aria-pressed="true">Tìm kiếm</a>
+                  </div>
+                
             </div>
+
+            
             
             
 
@@ -166,7 +182,7 @@
                                     <td>thanhdp881@gmail.com</td>                        
                                     <td>Admin</td>
                                     <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
-                                    <td>
+                                    <td class="text-center">
                                         <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
           
                                     </td>
@@ -177,7 +193,7 @@
                                   <td>ngnhien51@gmail.com</td>                        
                                   <td>Người bảo trì</td>
                                   <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
-                                  <td>
+                                  <td class="text-center">
                                       <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
         
                                   </td>
@@ -188,7 +204,7 @@
                                 <td>khangdh2@gmail.com</td>                        
                                 <td>Kĩ thuật viên</td>
                                 <td><span class="status text-success">&bull;</span> Đang hoạt động</td>
-                                <td>
+                                <td  class="text-center">
                                     <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
       
                                 </td>
@@ -199,7 +215,7 @@
                               <td>kdsd@gmai.com</td>                        
                               <td>Admin</td>
                               <td><span class="status text-secondary">&bull;</span> Không hoạt động</td>
-                              <td>
+                              <td  class="text-center">
                                   <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
     
                               </td>
@@ -210,7 +226,7 @@
                             <td>hudsf@gmail.com</td>                        
                             <td>Người bảo trì</td>
                             <td><span class="status text-secondary">&bull;</span> Không hoạt động</td>
-                            <td>
+                            <td  class="text-center">
                                 <a href="#" class="settings" title="Sửa" data-toggle="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"><i class="fa fa-pencil-square"></i></a>
   
                             </td>
@@ -278,6 +294,11 @@
               <td><input type="text" id="soDienThoaiThem"></td>
           </tr>
 
+
+          <tr>
+            <td>Địa chỉ:</td>
+            <td><input type="text" id="diaChiThem"></td>
+        </tr>
             <tr>
                 <td>Hình:</td>
                 <td>
@@ -322,22 +343,27 @@
 
     
       
-      <form action="" >
-        <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
+
+         <div id="khungSuaSanPham" class="overlay" >
         <table class="overlayTable table-outline table-content table-header">
+          <thead>
+           
+              <th class="tilt" colspan="2">Sửa thông tin người dùng
+                <button  class="close" >
+                  ×
+                 </button> 
+                 </th>
+             
+              
+  
+          </thead>
+          
           <tbody>
-            <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
-            <tr>
-              
-              
-               
-              
-              <th class="tilt" colspan="2">Sửa thông tin người dùng </th>
-              
-          </tr>
+         
+           
           <tr>
               <td>Tên người dùng:</td>
-              <td><input type="text" value="Huỳnh Duy Khang"></td>
+              <td><input type="text" id="tenNguoiDungSua" value="Huỳnh Duy Khang"></td>
           </tr>
          
           
@@ -353,7 +379,7 @@
           <tr>
               <td>Vai trò:</td>
               <td>
-                <select name="" id="">
+                <select name="" id="vaiTroSua">
                   <option value="0">Admin</option>
                   <option value="1">Kĩ thuật viên</option>
                   <option value="1">Người bảo trì</option>
@@ -364,21 +390,24 @@
         
           <tr>
               <td>Email:</td>
-              <td><input type="text" value="hdkhang@gmail.com"></td>
+              <td><input type="text" id="emailSua" id="emaiCu" value="hdkhang@gmail.com"></td>
           </tr>
           
+          <tr>
+            <td>Địa chỉ:</td>
+            <td><input type="text" id="diaChiSua" value="48/42 Âu Cơ"></td>
+          </tr>
           
          
           <tr>
-              <td colspan="2" class="table-footer"> <button onclick="suaSanPham('IP0')">SỬA</button> </td>
+              <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
           </tr>
       </tbody>
       </table>
     </div>
-      </form>
       
-      
-
+       
+    
 
 
 
@@ -387,9 +416,23 @@
       <script src="/js/jquery.min.js"></script>
       <script src="/js/admin.js"></script>
       <script>
-        document.querySelector('.close').addEventListener('click', function() {
-          document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
+        // document.querySelector('.close').addEventListener('click', function() {
+        //   document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
+          
+        // });
+
+        // document.querySelector('.close').addEventListener('click', function() {
+        //   document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
+          
+        // });
+
+        document.querySelectorAll('.close').forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+          const overlay = closeButton.closest('.overlay');
+          overlay.style.transform = 'scale(0)';
         });
+      });
+        
       </script>
 
 

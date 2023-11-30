@@ -718,7 +718,8 @@
         color: #2196F3;
     }
     table.table td a.settings {
-        color: #2196F3;
+        color: #1964af;
+        
     }
    
     table.table td i {
@@ -803,12 +804,26 @@
     /* CSS for user role selection */
 .user_role {
     margin: 20px 0;
+    
   }
   
   .user_role select {
     width: 150px;
     padding: 5px;
     border: 1px solid #ccc;
+  }
+
+  .user_search input{
+    width: 200px;
+    padding: 6px;
+    border:  1px solid #ccc;
+    margin: 25px 0;
+  }
+
+  .btn-search{
+    margin-top: 25px;
+    padding: 2px;
+
   }
   
   /* CSS for user management table */
@@ -837,9 +852,9 @@
     cursor: pointer;
   }
   
-  .btn:hover {
+  /* .btn:hover {
     background-color: #eeeeee;
-  }
+  } */
   
   /* .btn.btn-secondary {
     background-color: #6c757d;
@@ -922,4 +937,37 @@
     border: 1px solid #ccc;
   }
 
- 
+ .search-p{
+    margin-top: 22px;
+ }
+
+ .search-btnn{
+    margin-top: 25px;
+ }
+
+ .bg-label-success {
+    background-color: #e6f7d9 !important;
+    color: #56ca00 !important;
+}
+.badge {
+    line-height: 1.05;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+.bg-label-danger {
+    background-color: rgb(234, 176, 164) !important;
+    color: #d13030 !important;
+}
+
+.bg-label-primary {
+    background-color: rgb(193, 204, 236)!important;
+    color: rgb(36, 119, 234) !important;
+}
+
+.bg-label-warning {
+    background-color: rgb(237, 215, 173)!important;
+    color: rgb(242, 173, 36) !important;
+}

@@ -18,21 +18,29 @@ $(document).ready(function(){
   // Kiểm tra tên người dùng
   var tenNguoiDung = document.getElementById("maspThem").value;
   if (tenNguoiDung == "") {
-    alert("Vui lòng nhập tên người dùng");
+    alert("Vui lòng nhập tên người dùng!");
     return;
   }
 
   // Kiểm tra email
   var email = document.getElementById("emailThem").value;
   if (email == "") {
-    alert("Vui lòng nhập email");
+    alert("Vui lòng nhập email!");
     return;
   }
 
+  // kiem tra dia chi
+  let address = document.getElementById("diaChiThem").value;
+  if(address = ""){
+    alert="Vui lòng nhập địa chỉ!";
+    return;
+  }
+
+
   // Kiểm tra số điện thoại
     var soDienThoai = document.getElementById("soDienThoaiThem").value;
-  if (isNaN(soDienThoai)) {
-    alert("Số điện thoại phải là dữ liệu số");
+  if (isNaN(soDienThoai) || !soDienThoai) {
+    alert("VUi lòng nhập số điện thoại. Số điện thoại phải là dữ liệu số!");
     return;
   }
 
@@ -87,32 +95,43 @@ $(document).ready(function(){
       }
     }
 // Sửa
-function suaSanPham(masp) {
-  // Hiển thị khung sửa sản phẩm
-  document.getElementById('khungSuaSanPham').style.display = 'block';
+  function suaSanPham() {
+    
+  // Validate user input
+  const tenNguoiDung = document.getElementById('tenNguoiDungSua').value.trim();
+  const vaiTro = document.getElementById('vaiTroSua').value;
+  const email = document.getElementById('emailSua').value.trim();
+  const diaChi = document.getElementById('diaChiSua').value.trim();
 
-  // Lấy thông tin sản phẩm từ table
-  var sp = layThongTinSanPhamTuTable('khungSuaSanPham');
-  if (!sp) return;
-
-  // Sửa
-  for (var i = 0; i < list_products.length; i++) {
-    if (list_products[i].masp == masp) {
-      list_products[i] = sp;
-    }
+  // Check for empty fields
+  if (!tenNguoiDung) {
+    alert('Tên người dùng không được để trống');
+    return;
+  } else if (!vaiTro) {
+    alert('Vui lòng chọn vai trò cho người dùng');
+    return;
+  } else if (!email) {
+    alert('Email không được để trống');
+    return;
+  } else if (!diaChi) {
+    alert('Địa chỉ không được để trống');
+    return;
   }
 
-  // Lưu vào localstorage
-  setListProducts(list_products);
+  // Validate email format
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert('Email không đúng định dạng');
+    return;
 
-  // Vẽ lại table
-  addTableProducts();
+  
 
-  alert('Sửa ' + sp.name + ' thành công');
 
-  // Ẩn khung sửa sản phẩm
-  document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
-}
+  }
+
+  alert("Sửa thành công!!");
+    // Ẩn khung sửa sản phẩm
+    document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
+  }
 
 
 
