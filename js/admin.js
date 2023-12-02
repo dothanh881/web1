@@ -95,43 +95,159 @@ $(document).ready(function(){
       }
     }
 // Sửa
-  function suaSanPham() {
-    
-  // Validate user input
-  const tenNguoiDung = document.getElementById('tenNguoiDungSua').value.trim();
-  const vaiTro = document.getElementById('vaiTroSua').value;
-  const email = document.getElementById('emailSua').value.trim();
-  const diaChi = document.getElementById('diaChiSua').value.trim();
+function suaNguoiDung() {
+  // Kiểm tra tên người dùng
+  const tenNguoiDung = document.getElementById("tenNguoiDungSua").value;
+  if (tenNguoiDung === "") {
+    alert("Tên người dùng không được để trống!");
+    return;
+  }
+
+  // Kiểm tra email
+  const email = document.getElementById("emailSua").value;
+  if (email === "") {
+    alert("Email không được để trống!");
+    return;
+  }
+
+  // Kiểm tra vai trò
+  const vaiTro = document.getElementById("vaiTroSua").value;
+  if (vaiTro === "") {
+    alert("Vai trò không được để trống!");
+    return;
+  }
+
+  // Kiểm tra email hợp lệ
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!re.test(email)) {
+    alert("Email không hợp lệ!");
+    return;
+  }
+
+  // Lưu dữ liệu thành công
+  alert("Lưu dữ liệu thành công!");
+}
+
+
+function suaSanPham() {
+  // Validate product information
+  const id = document.getElementById('idSua').value.trim();
+  const tenSanPham = document.getElementById('tenSanPhamSua').value.trim();
+  const hangSanXuat = document.getElementById('hangSanXuatSua').value;
+  const hinhDaiDien = document.getElementById('anhDaiDienSanPhamSua').src;
+  const ram = document.getElementById('ramSua').value.trim();
+  const boNhoTrong = document.getElementById('boNhoTrongSua').value.trim();
+  const resolution = document.getElementById('resolutionSua').value.trim();
+  const dungLuongPin = document.getElementById('dungLuongPinSua').value.trim();
 
   // Check for empty fields
-  if (!tenNguoiDung) {
-    alert('Tên người dùng không được để trống');
+  if (!id) {
+    alert('Mã sản phẩm không được để trống');
     return;
-  } else if (!vaiTro) {
-    alert('Vui lòng chọn vai trò cho người dùng');
+  } else if (!tenSanPham) {
+    alert('Tên sản phẩm không được để trống');
     return;
-  } else if (!email) {
-    alert('Email không được để trống');
+  } else if (!hangSanXuat) {
+    alert('Vui lòng chọn hàng sản xuất');
     return;
-  } else if (!diaChi) {
-    alert('Địa chỉ không được để trống');
+  } else if (!hinhDaiDien) {
+    alert('Hình ảnh không được để trống');
+    return;
+  } else if (!ram) {
+    alert('RAM không được để trống');
+    return;
+  } else if (!boNhoTrong) {
+    alert('Bộ nhớ trong không được để trống');
+    return;
+  } else if (!resolution) {
+    alert('Độ phân giải không được để trống');
+    return;
+  } else if (!dungLuongPin) {
+    alert('Dung lượng pin không được để trống');
     return;
   }
 
-  // Validate email format
-  if (!/\S+@\S+\.\S+/.test(email)) {
-    alert('Email không đúng định dạng');
+  // Perform product update
+  // ...
+
+  // Display success message
+  alert('Sửa sản phẩm thành công!');
+
+  // Hide product edit form
+  document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
+}
+
+function themSanPham() {
+  // Validate product information
+  const maspThem = document.getElementById('maspThem').value.trim();
+  const tenspthem = document.getElementById('tenspthem').value.trim();
+  const giaspthem = document.getElementById('giaspthem').value.trim();
+  const ramthem = document.getElementById('ramthem').value.trim();
+  const bonhotrongthem = document.getElementById('bonhotrongthem').value.trim();
+  const thenho = document.getElementById('thenho').value.trim();
+  const dungluongpin = document.getElementById('dungluongpin').value.trim();
+
+  // Check for empty fields
+  if (!maspThem) {
+    alert('Nhập mã sản phẩm');
     return;
-
-  
-
-
+  } else if (!tenspthem) {
+    alert('Nhập tên sản phẩm');
+    return;
+  } else if (!giaspthem) {
+    alert('Nhập giá tiền');
+    return;
+  } else if (!ramthem) {
+    alert('RAM không được để trống');
+    return;
+  } else if (!bonhotrongthem) {
+    alert('Bộ nhớ trong không được để trống');
+    return;
+  } else if (!thenho) {
+    alert('Độ phân giải không được để trống');
+    return;
+  } else if (!dungluongpin) {
+    alert('Dung lượng pin không được để trống');
+    return;
   }
 
-  alert("Sửa thành công!!");
-    // Ẩn khung sửa sản phẩm
-    document.getElementById('khungSuaSanPham').style.transform = 'scale(0)';
+  // Check for valid data types
+  // if (!isNaN(maspThem) ) {
+  //   alert('Nhập ');
+  //   return;
+  // }
+
+  if (isNaN(giaspthem) || giaspthem < 0) {
+    alert('Giá tiền phải là số không âm');
+    return;
   }
 
+  if (isNaN(ramthem) || ramthem < 0) {
+    alert('RAM phải là số không âm');
+    return;
+  }
 
+  if (isNaN(bonhotrongthem) || bonhotrongthem < 0) {
+    alert('Bộ nhớ trong phải là số không âm');
+    return;
+  }
 
+  if (isNaN(thenho) || thenho < 0) {
+    alert('Độ phân giải phải là số không âm');
+    return;
+  }
+
+  if (isNaN(dungluongpin) || dungluongpin < 0) {
+    alert('Dung lượng pin phải là số không âm');
+    return;
+  }
+
+  // Perform product adding
+  // ...
+
+  // Display success message
+  alert('Thêm sản phẩm thành công!');
+
+  // Hide product add form
+  document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
+}

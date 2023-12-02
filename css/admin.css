@@ -958,16 +958,32 @@
 }
 
 .bg-label-danger {
-    background-color: rgb(234, 176, 164) !important;
+    background-color: rgb(232, 214, 211) !important;
     color: #d13030 !important;
 }
 
 .bg-label-primary {
-    background-color: rgb(193, 204, 236)!important;
+    background-color: rgb(219, 226, 244)!important;
     color: rgb(36, 119, 234) !important;
 }
 
 .bg-label-warning {
-    background-color: rgb(237, 215, 173)!important;
+    background-color: rgb(247, 238, 222)!important;
     color: rgb(242, 173, 36) !important;
+}
+
+.header-searc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.search-btnn{
+    margin-left: 10px;
+    padding: 2px;
+}
+
+.search-nav{
+    margin-top: 20px;
 }

@@ -27,6 +27,7 @@
             <a href="admin.html"><li><i class="fa fa-users"></i>Người dùng</li></a>
             <a href="category.html"><li class="nav-active"> <i class="fa fa-product-hunt"></i> Sản phẩm</li></a>
             <a href="order.html"><li><i class="fa fa-truck"></i>Đơn hàng</li></a>
+            <a href="customer.html"><li ><i class="fa fa-users"></i>Khách hàng</li></a>
             <a href="thongke.html"><li><i class="fa fa-pencil-square-o"></i>Thống kê </li></a>
           
           </div>
@@ -147,7 +148,7 @@
             <div class="col-md-3 category-search">
                     
              
-              <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm" aria-controls="DataTables_Table_0">
+              <input type="text"  id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Tìm kiếm mã sản phẩm" aria-controls="DataTables_Table_0">
           
               
       
@@ -165,9 +166,9 @@
                
         
             
-              <div class="table">
+              <div class="table" >
                 
-                <table class="table table-bordered bg  table-hover" id="render">
+                <table class="table table-bordered bg  table-hover" id="myTable">
                  
                   <thead class="bg-head" >
                     <tr>
@@ -193,7 +194,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham1').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -238,7 +239,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham2').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -259,7 +260,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham3').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -281,7 +282,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -303,7 +304,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -325,7 +326,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -348,7 +349,7 @@
                     <td >
                       <div class="act-function">
                         <div class="tool">
-                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';" aria-hidden="true"></i>
+                          <i class="fa fa-pencil-square" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';" aria-hidden="true"></i>
                           <span class="tooltext">Sửa</span>
                         </div>
                          
@@ -470,7 +471,7 @@
                   </tbody></table>
               </div>
 
-
+<!-- sp1 -->
   <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
     <table class="overlayTable table-outline table-content table-header">
         
@@ -487,16 +488,16 @@
         </tr>
         <tr>
             <td>Mã sản phẩm:</td>
-            <td><input type="text" value="IP1"></td>
+            <td><input type="text" id="idSua" value="IP1"></td>
         </tr>
         <tr>
             <td>Tên sản phẩm:</td>
-            <td><input type="text" value="iPhone 13 Pro Max"></td>
+            <td><input type="text" id="tenSanPhamSua" value="iPhone 13 Pro Max"></td>
         </tr>
         <tr>
             <td>Hãng:</td>
             <td>
-                <select>
+                <select id="hangSanXuatSua">
                   <option value="Apple" selected>Apple</option>
                   <option value="Samsung">Samsung</option>
                  
@@ -517,30 +518,335 @@
       
         <tr>
             <td>RAM:</td>
-            <td><input type="text" value="8 GB"></td>
+            <td><input type="text"    id="ramSua"    value="8 GB"></td>
         </tr>
         <tr>
             <td>Bộ nhớ trong:</td>
-            <td><input type="text" value="256 GB"></td>
+            <td><input type="text" id="boNhoTrongSua" value="256 GB"></td>
         </tr>
         
         <tr>
           <td>Độ phân giải:</td>
-          <td><input type="text" value="2796 x 1290 Pixels"></td>
+          <td><input type="text" id="resolutionSua" value="2778 x 1284 Pixels"></td>
       </tr>
       
         
         <tr>
             <td>Dung lượng Pin:</td>
-            <td><input type="text" value="4440 mAh"></td>
+            <td><input type="text" id="dungLuongPinSua" value="4352 mAh"></td>
         </tr>
         <tr>
-            <td colspan="2" class="table-footer"> <button onclick="suaSanPham('IP0')">SỬA</button> </td>
+            <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
         </tr>
     </tbody>
     </table>
     </div>
+    <!-- sp1   -->
+    
+    
+    <!-- sp2 -->
+    <div id="khungSuaSanPham1" class="overlay" style="transform: scale(0);">
+      <table class="overlayTable table-outline table-content table-header">
+          
+        <thead>
+          <th class="tilt" colspan="2">iPhone 14 Pro Max
+           <button  class="close">×</button>
+          </th>
+  
+  
+        </thead>
         
+        <tbody><tr>
+              
+          </tr>
+          <tr>
+              <td>Mã sản phẩm:</td>
+              <td><input type="text" id="idSua" value="IP0"></td>
+          </tr>
+          <tr>
+              <td>Tên sản phẩm:</td>
+              <td><input type="text" id="tenSanPhamSua" value="iPhone 14 Pro Max"></td>
+          </tr>
+          <tr>
+              <td>Hãng:</td>
+              <td>
+                  <select id="hangSanXuatSua">
+                    <option value="Apple" selected>Apple</option>
+                    <option value="Samsung">Samsung</option>
+                   
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>Hình:</td>
+              <td>
+                  <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product01.png" >
+                  <input type="file" accept="image/* ">
+              </td>
+          </tr>
+          
+          
+         
+       
+        
+          <tr>
+              <td>RAM:</td>
+              <td><input type="text"    id="ramSua"    value="8 GB"></td>
+          </tr>
+          <tr>
+              <td>Bộ nhớ trong:</td>
+              <td><input type="text" id="boNhoTrongSua" value="512 GB"></td>
+          </tr>
+          
+          <tr>
+            <td>Độ phân giải:</td>
+            <td><input type="text" id="resolutionSua" value="2796 x 1290 Pixels"></td>
+        </tr>
+        
+          
+          <tr>
+              <td>Dung lượng Pin:</td>
+              <td><input type="text" id="dungLuongPinSua" value="4323 mAh"></td>
+          </tr>
+          <tr>
+              <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
+          </tr>
+      </tbody>
+      </table>
+      </div>
+    <!-- sp2 -->
+
+<!-- sp3 -->
+
+<div id="khungSuaSanPham2" class="overlay" style="transform: scale(0);">
+  <table class="overlayTable table-outline table-content table-header">
+      
+    <thead>
+      <th class="tilt" colspan="2">iPhone 12 Pro Max
+       <button  class="close">×</button>
+      </th>
+
+
+    </thead>
+    
+    <tbody><tr>
+          
+      </tr>
+      <tr>
+          <td>Mã sản phẩm:</td>
+          <td><input type="text" id="idSua" value="IP2"></td>
+      </tr>
+      <tr>
+          <td>Tên sản phẩm:</td>
+          <td><input type="text" id="tenSanPhamSua" value="iPhone 12 Pro Max"></td>
+      </tr>
+      <tr>
+          <td>Hãng:</td>
+          <td>
+              <select id="hangSanXuatSua">
+                <option value="Apple" selected>Apple</option>
+                <option value="Samsung">Samsung</option>
+               
+              </select>
+          </td>
+      </tr>
+      <tr>
+          <td>Hình:</td>
+          <td>
+              <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product03.png" >
+              <input type="file" accept="image/* ">
+          </td>
+      </tr>
+      
+      
+     
+   
+    
+      <tr>
+          <td>RAM:</td>
+          <td><input type="text"    id="ramSua"    value="6 GB"></td>
+      </tr>
+      <tr>
+          <td>Bộ nhớ trong:</td>
+          <td><input type="text" id="boNhoTrongSua" value="256 GB"></td>
+      </tr>
+      
+      <tr>
+        <td>Độ phân giải:</td>
+        <td><input type="text" id="resolutionSua" value="2778 x 1284 Pixels"></td>
+    </tr>
+    
+      
+      <tr>
+          <td>Dung lượng Pin:</td>
+          <td><input type="text" id="dungLuongPinSua" value="3687 mAh"></td>
+      </tr>
+      <tr>
+          <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
+      </tr>
+  </tbody>
+  </table>
+  </div>
+<!-- sp3 -->
+
+<!-- sp4 -->
+<div id="khungSuaSanPham3" class="overlay" style="transform: scale(0);">
+  <table class="overlayTable table-outline table-content table-header">
+      
+    <thead>
+      <th class="tilt" colspan="2">iPhone 15 Pro Max
+       <button  class="close">×</button>
+      </th>
+
+
+    </thead>
+    
+    <tbody><tr>
+          
+      </tr>
+      <tr>
+          <td>Mã sản phẩm:</td>
+          <td><input type="text" id="idSua" value="IP3"></td>
+      </tr>
+      <tr>
+          <td>Tên sản phẩm:</td>
+          <td><input type="text" id="tenSanPhamSua" value="iPhone 15 Pro Max"></td>
+      </tr>
+      <tr>
+          <td>Hãng:</td>
+          <td>
+              <select id="hangSanXuatSua">
+                <option value="Apple" selected>Apple</option>
+                <option value="Samsung">Samsung</option>
+               
+              </select>
+          </td>
+      </tr>
+      <tr>
+          <td>Hình:</td>
+          <td>
+              <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product04.png" >
+              <input type="file" accept="image/* ">
+          </td>
+      </tr>
+      
+      
+     
+   
+    
+      <tr>
+          <td>RAM:</td>
+          <td><input type="text"    id="ramSua"    value="8 GB"></td>
+      </tr>
+      <tr>
+          <td>Bộ nhớ trong:</td>
+          <td><input type="text" id="boNhoTrongSua" value="256 GB"></td>
+      </tr>
+      
+      <tr>
+        <td>Độ phân giải:</td>
+        <td><input type="text" id="resolutionSua" value="2796 x 1290 Pixels"></td>
+    </tr>
+    
+      
+      <tr>
+          <td>Dung lượng Pin:</td>
+          <td><input type="text" id="dungLuongPinSua" value="4422 mAh"></td>
+      </tr>
+      <tr>
+          <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
+      </tr>
+  </tbody>
+  </table>
+  </div>
+<!-- sp4 -->
+
+
+  <!-- sp5 -->
+  <div id="khungSuaSanPham4" class="overlay" style="transform: scale(0);">
+    <table class="overlayTable table-outline table-content table-header">
+        
+      <thead>
+        <th class="tilt" colspan="2">Samsung Galaxy S23 Ultra
+         <button  class="close">×</button>
+        </th>
+
+
+      </thead>
+      
+      <tbody><tr>
+            
+        </tr>
+        <tr>
+            <td>Mã sản phẩm:</td>
+            <td><input type="text" id="idSua" value="SS0"></td>
+        </tr>
+        <tr>
+            <td>Tên sản phẩm:</td>
+            <td><input type="text" id="tenSanPhamSua" value="Samsung Galaxy S23 Ultra"></td>
+        </tr>
+        <tr>
+            <td>Hãng:</td>
+            <td>
+                <select id="hangSanXuatSua">
+                  <option value="Samsung" selected>Samsung</option>
+                  <option value="Apple" >Apple</option>
+                 
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Hình:</td>
+            <td>
+                <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="/img/product05.png" >
+                <input type="file" accept="image/* ">
+            </td>
+        </tr>
+        
+        
+       
+     
+      
+        <tr>
+            <td>RAM:</td>
+            <td><input type="text"    id="ramSua"    value="12 GB"></td>
+        </tr>
+        <tr>
+            <td>Bộ nhớ trong:</td>
+            <td><input type="text" id="boNhoTrongSua" value="256 GB"></td>
+        </tr>
+        
+        <tr>
+          <td>Độ phân giải:</td>
+          <td><input type="text" id="resolutionSua" value="3088 x 1440 Pixels"></td>
+      </tr>
+      
+        
+        <tr>
+            <td>Dung lượng Pin:</td>
+            <td><input type="text" id="dungLuongPinSua" value="5000 mAh"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table-footer"> <button onclick="suaSanPham()">SỬA</button> </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+  <!-- sp5 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
       
       </section>
@@ -551,6 +857,38 @@
      
 
       <script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+//d
         document.querySelectorAll('.close').forEach(function(closeButton) {
         closeButton.addEventListener('click', function() {
           const overlay = closeButton.closest('.overlay');
@@ -559,8 +897,7 @@
       });
       </script>
 
-
-
+      
 
 </body>
 </html>

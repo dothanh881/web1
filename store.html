@@ -27,8 +27,9 @@
  		<!-- Custom stlylesheet -->
  		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="css/searchproduct.css">
-		<style>
 	
+		<style>
+
 		</style>
 
     </head>
@@ -220,73 +221,42 @@
 				<div class="row">
 					<!-- ASIDE -->
 					<div id="aside" class="col-md-3">
-						<!-- aside Widget -->
+					
+
 						<div class="aside">
 							<h3 class="aside-title">PHÂN LOẠI</h3>
-							<div class="checkbox-filter">
-									<div class="input-checkbox">
-										<input type="checkbox" id="category-1" data-href="samsung.html">
-										<label for="category-1">
-										  <span></span>
-										  Samsung
-										  <small>(120)</small>
-										</label>
-									</div>
-								  
-									<div class="input-checkbox">
-										<input type="checkbox" id="category-6" data-href="iphone.html">
-										<label for="category-6">
-										  <span></span>
-										  Iphone
-										  <small>(740)</small>
-										</label>
-									  </div>
-									
-								  
+							<div class="box">
+                                    <div class="advanced-search-category">
+                                
+                                        <select name="" id="category-filter">
+                                    <option value="all">Tất cả sản phẩm</option>
+                                    <option value="iphone">Iphone</option>
+                                    <option value="samsung">Samsung</option>
+                                        </select>
+                                    </div>
+						</div>
+						</div>
+							<div class="aside">
+								<h3 class="aside-title">Giá</h3>
+
 								
-							</div>
-						</div>
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Giá</h3>
-							<!-- <div class="price-filter">
-								<div id="price-slider"></div>
-								<div class="input-number price-min">
-									<input id="price-min" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<span>-</span>
-								<div class="input-number price-max">
-									<input id="price-max" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-							</div> -->
+								<div class="advanced-search-price" id="price-filter">
+                                <span>Giá từ</span><br>
+                                <input type="number" placeholder="triệu" id="min-price" min="0" ><br>
+                                <span>Đến</span><br>
+                                <input type="number" placeholder="triệu" id="max-price" min="0">
+                                
+                           	 	</div>
+									<button type="button" class="btn btn-primary btnnsearch" onsubmit=" validatePriceInput()">Tìm kiếm</button>
+                        </div>
+                   
 
 
-							<div class="price-filter">
-								<div class="checkbox-group">
-								<input type="checkbox" id="price-under-10" name="price" value="under-10" >
-								  <label for="price-under-10">Dưới 10 triệu</label>
-								  
-								</div>
-								<div class="checkbox-group">
-									<input type="checkbox" id="price-10-20" name="price" value="10-20">
-								  <label for="price-10-20"> Từ 10 - 20 triệu</label>
-								  
-								</div>
-								<div class="checkbox-group">
-									<input type="checkbox" id="price-over-20" name="price" value="over-20">
-								  <label for="price-over-20">Trên 20 triệu</label>
-								  
-								</div>
+      
+    
 							
-							</div>
 							
-						</div>
+						
 						<!-- /aside Widget -->
 
 						
@@ -361,7 +331,7 @@
 							<!-- product -->
 							
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20">
+								<div class="product" data-price-range="25-30"  data-price="27090000" data-category="iphone">
 									<a href="product.html">
 										<div class="product-img">
 											<img src="./img/product01.png" alt="">
@@ -387,7 +357,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="under-10">
+								<div class="product" data-price-range="under-10"  data-price="9990000" data-category="samsung">
 									<a href="productsamsung.html">
 										<div class="product-img">
 											<img src="./img/product08.png" alt="">
@@ -417,7 +387,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20">
+								<div class="product" data-price-range="15-20"  data-price="17490000" data-category="iphone">
 									<a href="product.html">
 										<div class="product-img">
 											<img src="./img/product03.png" alt="">
@@ -445,7 +415,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20">
+								<div class="product" data-price-range="over-30"  data-price="33590000" data-category="iphone">
 									<a href="product.html">
 										<div class="product-img">
 											<img src="./img/product04.png" alt="">
@@ -472,7 +442,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20">
+								<div class="product" data-price-range="over-30"  data-price="31990000" data-category="samsung">
 									<a href="productsamsung.html">
 										<div class="product-img">
 											<img src="./img/product05.png" alt="">
@@ -498,7 +468,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20">
+								<div class="product" data-price-range="10-15"  data-price="10590000" data-category="samsung">
 									<a href="productsamsung.html">
 										<div class="product-img">
 										<img src="./img/product06.png" alt="">
@@ -527,7 +497,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20">
+								<div class="product" data-price-range="10-15"  data-price="12890000" data-category="samsung">
 									<a href="productsamsung.html">
 										<div class="product-img">
 											<img src="./img/product07.png" alt="">
@@ -553,7 +523,7 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20">
+								<div class="product" data-price-range="20-25"  data-price="23990000" data-category="iphone">
 									<a href="product.html">
 										<div class="product-img">
 											<img src="./img/product02.png" alt="">
@@ -585,7 +555,7 @@
 							
 
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20">
+								<div class="product" data-price-range="10-15"  data-price="10490000" data-category="iphone">
 									<a href="product.html">
 										<div class="product-img">
 											<img src="./img/product09.png" alt="">
@@ -766,67 +736,107 @@
 		<script src="js/searchproduct.js"></script>
 		<script>
 
-		const priceFilterCheckboxes = document.querySelectorAll('.price-filter .checkbox-group input[type="checkbox"]');
+	
+	
 
-		function filterProducts(priceRange) {
-		const productsList = document.querySelector('.prod-list');
-		const allProductElements = document.querySelectorAll('.product');
-		const productRow = document.createElement('div');
-		productRow.classList.add('product-row');
 
-		// ẩn tất cả sản phẩm trước khi lọc
-		for (const productElement of allProductElements) {
-			productElement.style.display = 'none';
-		}
 
+const priceFilterSelect = document.getElementById('price-filter');
+const categoryFilterSelect = document.getElementById('category-filter');
+const minPriceInput = document.getElementById('min-price');
+const maxPriceInput = document.getElementById('max-price');
+const productsList = document.querySelector('.prod-list');
+const allProductElements = document.querySelectorAll('.product');
+const productRow = document.createElement('div');
+productRow.classList.add('product-row');
+
+const searchButton = document.querySelector('.btnnsearch');
+
+function filterProducts() {
+  // Get selected price range and category
+  const selectedPriceRange = priceFilterSelect.value;
+  const selectedCategory = categoryFilterSelect.value;
+
+  // Get min and max price values from inputs
+  const minPrice = parseInt(minPriceInput.value) || 0;
+  const maxPrice = parseInt(maxPriceInput.value) || Number.MAX_VALUE;
+
+  // Initialize an empty array to store filtered products
+  let filteredProducts = [];
+
+  // Iterate through all product elements
+  for (const productElement of allProductElements) {
+    // Get product's price range, category, and actual price
+    const productPriceRange = productElement.getAttribute('data-price-range');
+    const productCategory = productElement.getAttribute('data-category');
+    const productBrand = productElement.getAttribute('data-brand');
+    const productPrice = parseFloat(productElement.querySelector('.product-price').textContent);
+
+    // Filter products based on category and price range
+	if (selectedCategory === 'all') {
+		
+  // Filter by price range alone for all categories
+  if (selectedPriceRange !== 'all') {
+    if (productPrice >= minPrice && productPrice <= maxPrice) {
+      filteredProducts.push(productElement);
+    }
+  } else {
+    // Add all products if no price range is selected
+    filteredProducts.push(productElement);
+  }
+} else if (selectedCategory === 'samsung') {
+  // Filter Samsung products by price range
+  if (selectedPriceRange !== 'all') {
+    if (productCategory === 'samsung' && productPrice >= minPrice && productPrice <= maxPrice) {
+      filteredProducts.push(productElement);
+    }
+  } else {
+    // Add all Samsung products if no price range is selected
+    if (productCategory === 'samsung') {
+      filteredProducts.push(productElement);
+    }
+  }
+} else {
+  // Filter non-Samsung products by price range
+  if (selectedPriceRange !== 'all') {
+    if (productCategory !== 'samsung' && productPrice >= minPrice && productPrice <= maxPrice) {
+      filteredProducts.push(productElement);
+    }
+  } else {
+    // Add all non-Samsung products if no price range is selected
+    if (productCategory !== 'samsung') {
+      filteredProducts.push(productElement);
+    }
+  }
+}
+  }
+
+
+  // Remove duplicates from filtered products array
+  const uniqueFilteredProducts = [...new Set(filteredProducts)];
+
+  // Display filtered products
+  productsList.innerHTML = ''; // Clear existing products before adding new ones
+  for (const product of uniqueFilteredProducts) {
+    productsList.appendChild(productRow);
+    product.style.display = 'block';
+    product.classList.add('col-md-4', 'col-xs-6');
+    productsList.appendChild(product);
+  }
+
+  
 		// ẩn phân trang
 		const pagination = document.querySelector('.store-pagination');
 		pagination.style.display = 'none';
 
-		// lọc sản phẩm dựa trên priceRange
-		if (priceRange === 'under-10') {
-			const under10Products = document.querySelectorAll('.product[data-price-range="under-10"]');
-			for (const product of under10Products) {
-				productsList.appendChild(productRow);
-				productsList.appendChild(product);
-			product.style.display = 'block';
-			product.classList.add('col-md-4', 'col-xs-6');
-			}
-		} else {
-			const filteredProducts = document.querySelectorAll(`.product[data-price-range="${priceRange}"]`);
-			for (const product of filteredProducts) {
-			productsList.appendChild(product);
-			product.style.display = 'block';
-			productsList.appendChild(productRow);
-			product.classList.add('col-md-4', 'col-xs-6');
-			}
-		}
+  
+}
 
+
+// Add event listener for search button
+searchButton.addEventListener('click', filterProducts);
 
 		
-		}
-
-		priceFilterCheckboxes.forEach(checkbox => {
-		checkbox.addEventListener('click', () => {
-			const priceRange = checkbox.value;
-			filterProducts(priceRange);
-		});
-		});
-
-
-	// checkbox phân loại iphone và samsung
-		const checkboxes = document.querySelectorAll('.input-checkbox input');
-		checkboxes.forEach(checkbox => {
-			checkbox.addEventListener('click', () => {
-		const href = checkbox.dataset.href;
-		const link = document.createElement('a');
-		link.href = href;
-		link.target = '_self';
-		link.click();
-		});
-		});
-
-
 
 		</script>
 	</body>

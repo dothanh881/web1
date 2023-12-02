@@ -16,6 +16,24 @@
     margin: 50px auto;
     width: auto;
     background-color: #f9f9f9;
+    position: relative;
+    top: 10%;
+    
+}
+.closet{
+    position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        color: #000000;
+        cursor: pointer;
+        transition: .2s ease;
+        border: none ;
+        border-radius: 50%;
 }
 
 .overlayTable td:first-child {
@@ -263,3 +281,13 @@
 #progressbar li.active:after {
     background: #1964af;
 }
+
+.head-table{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btnn{
+    margin-top: 10px;
+}
+
