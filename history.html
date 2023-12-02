@@ -263,7 +263,7 @@
 			  <div class="row">
 				<div class="col-md-6 col-lg-4 form-group">
 				  <label for="order-find">Mã đơn hàng</label>
-				  <input type="text" id="order-find" placeholder="Tìm kiếm đơn hàng..." class="form-control">
+				  <input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm đơn hàng..." class="form-control">
 				</div>
 		  
 				<div class="col-md-6 col-lg-4 form-group date-check">
@@ -290,10 +290,10 @@
              
             
 			<div class="table-responsive order">
-			  <table class="table table-bordered bg ">
+			  <table class="table table-bordered bg " id="myTable">
 				<thead >
 				  <tr class="bg-primary">
-					<th class="text-center">Mã sản phẩm</th>
+					<th class="text-center">Mã đơn hàng</th>
 					<th class="text-center">Sản phẩm</th>
 					<th class="text-center">Tên</th>
 					<th class="text-center">Giá</th>
@@ -305,33 +305,35 @@
 				  </tr>
 			  </thead>
 			  <tbody>
+
 				<tr class="text-center">
-				  <td>IP0</td>
-				  <td><img src="/img/product01.png" alt=""></td>
-				  <td>IPhone 14 PRO MAX</td>
-				  <td>27.090.000đ</td>
-				  <td>5/9/2022</td>
-				  <td>Hoàn thành</td>
-				  <td><a class="detail-link" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">Xem chi tiết</a></td>
-				</tr>
-				
-				<tr class="text-center">
-					<td>IP1</td>
-					<td><img src="/img/product02.png" alt=""></td>
-					<td>IPhone 13 PRO MAX</td>
-					<td>27.090.000đ</td>
-					<td>20/1/2023</td>
-					<td>Hoàn thành</td>
-					<td><a class="detail-link" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">Xem chi tiết</a></td>
-				  </tr>
-				  <tr class="text-center">
-					<td>IP4</td>
+					<td>GHTK-1606070665</td>
 					<td><img src="/img/product09.png" alt=""></td>
 					<td>IPhone 11 PRO</td>
-					<td>27.090.000đ</td>
-					<td>16/11/2023</td>
+					<td>10.490.000đ</td>
+					<td>26/11/2023</td>
 					<td>Hoàn thành</td>
 					<td><a class="detail-link"  onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">Xem chi tiết</a></td>
+				  </tr>
+				
+				
+				<tr class="text-center">
+					<td>GHTK-1606070235</td>
+					<td><img src="/img/product02.png" alt=""></td>
+					<td>IPhone 13 PRO MAX</td>
+					<td>23.000.000đ</td>
+					<td>20/1/2023</td>
+					<td>Hoàn thành</td>
+					<td><a class="detail-link" onclick="document.getElementById('khungSuaSanPham1').style.transform = 'scale(1)';">Xem chi tiết</a></td>
+				  </tr>
+				  <tr class="text-center">
+					<td>GHTK-1606070011</td>
+					<td><img src="/img/product01.png" alt=""></td>
+					<td>IPhone 14 PRO MAX</td>
+					<td>27.090.000đ</td>
+					<td>5/9/2022</td>
+					<td>Hoàn thành</td>
+					<td><a class="detail-link" onclick="document.getElementById('khungSuaSanPham2').style.transform = 'scale(1)';">Xem chi tiết</a></td>
 				  </tr>
 				</tbody>	
 				</table>
@@ -344,69 +346,241 @@
 		
         <!-- /MAICART -->
 	
-					<div id="khungSuaSanPham" class="overlay" style="transform: scale(0);"><span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
-						<div class="card overlayTable">
-							<div class="title">Chi tiết đơn hàng</div>
-							<div class="info">
-								<div class="row">
-									<div class="col-7 pull-left">
-										<span id="heading">Ngày</span><br>
-										<span id="details">16-11-2023</span>
-									</div>
-									<div class="col-5 pull-right">
-										<span id="heading">Mã đơn hàng</span><br>
-										<span id="details">GHTK-1606070005</span>
-									</div>
-								</div>      
-							</div>      
-							<div class="pricing">
-								<div class="row">
-									<div class="col-md-9 pull-left">
-										<span id="name">iPhone 14 Pro Max</span>  
-									
-									</div>
-									<div class="col-md-3 pull-right">
-										<span id="price">35.000.000đ</span>
-									</div>
-								</div>
-
-								
-								<div class="row">
-									<div class="col-md-9 pull-left">
-										<span id="name">Ship</span>
-									</div>
-									<div class="col-md-3 pull-right">
-										<span id="price">Miễn phí</span>
-									</div>
-								</div>
-							</div>
-							<div class="total">
-								<div class="row">
-									<div class="col-9 pull-left"></div>
-									<div class="col-3 pull-right"><big>35.000.000đ</big></div>
-								</div>
-							</div>
-							<div class="tracking">
-								<div class="title">Theo dõi đơn hàng</div>
-							</div>
-							<div class="progress-track">
-								<ul id="progressbar">
-									<li class="step0 active " id="step1">Đã đặt đơn</li>
-									<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
-									<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
-									<li class="step0 active text-right" id="step4">Đã giao hàng thành công</li>
-								</ul>
-							</div>
-							
-				
+		<div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
+			<div class="card overlayTable">
+				<div class="title">Chi tiết đơn hàng
+				  <button class="closet">
+					×
+				  </button>
+				</div>
+				<div class="info">
+				  <div class="row">
+					<div class="col-6 pull-left">
+					  <span id="heading">
+						Địa chỉ nhận hàng
+					  </span><br>
+					  <span id="details">
+						48/24 Âu Cơ, Phú Trung, Quận Tân Phú, TP.HCM                  </span>
+					</div>
+					<!-- <div class="col-6 pull-right">
+					 <span id="heading">Mã khách hàng: </span>
+					 <span id="details"> #14221</span>
+					</div> -->
+				  </div>
+					<div class="row">
+						<div class="col-7 pull-left">
+							<span id="heading">Ngày</span><br>
+							<span id="details">26-11-2023</span>
+						</div>
+						<div class="col-5 pull-right">
+							<span id="heading">Mã đơn hàng</span><br>
+							<span id="details">GHTK-1606070665</span>
+						</div>
+					</div>      
+				</div>      
+				<div class="pricing">
+					<div class="row">
+						<div class="col-md-9 pull-left">
+							<span id="name">iPhone 11 Pro</span>  
 						
-							   
-							</div>
+						</div>
+						<div class="col-md-3 pull-right">
+							<span id="price">10.490.000đ</span>
 						</div>
 					</div>
-
+  
+					
+					<div class="row">
+						<div class="col-md-9 pull-left">
+							<span id="name">Ship</span>
+						</div>
+						<div class="col-md-3 pull-right">
+							<span id="price">Miễn phí</span>
+						</div>
+					</div>
+				</div>
+				<div class="total">
+					<div class="row">
+						<div class="col-md-9 pull-left">Tổng</div>
+						<div class="col-md-3 pull-right"><big>10.490.000đ</big></div>
+					</div>
+				</div>
+				<div class="tracking">
+					<div class="title">Theo dõi đơn hàng</div>
+				</div>
+				<div class="progress-track">
+					<ul id="progressbar">
+						<li class="step0 active " id="step1">Đã đặt đơn</li>
+						<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
+						<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
+						<li class="step0  active text-right" id="step4">Đã giao hàng thành công</li>
+					</ul>
+				</div>
 				
+	
 			
+				   
+				</div>
+		</div>
+					
+<!-- ksp1 -->
+<div id="khungSuaSanPham1" class="overlay" style="transform: scale(0);">
+	<div class="card overlayTable">
+		<div class="title">Chi tiết đơn hàng
+		  <button class="closet">
+			×
+		  </button>
+		</div>
+		<div class="info">
+		  <div class="row">
+			<div class="col-6 pull-left">
+			  <span id="heading">
+				Địa chỉ nhận hàng
+			  </span><br>
+			  <span id="details">
+				48/24 Âu Cơ, Phú Trung, Quận Tân Phú, TP.HCM                  </span>
+			</div>
+			<!-- <div class="col-6 pull-right">
+			 <span id="heading">Mã khách hàng: </span>
+			 <span id="details"> #14221</span>
+			</div> -->
+		  </div>
+			<div class="row">
+				<div class="col-7 pull-left">
+					<span id="heading">Ngày</span><br>
+					<span id="details">20-1-2023</span>
+				</div>
+				<div class="col-5 pull-right">
+					<span id="heading">Mã đơn hàng</span><br>
+					<span id="details">GHTK-1606070235</span>
+				</div>
+			</div>      
+		</div>      
+		<div class="pricing">
+			<div class="row">
+				<div class="col-md-9 pull-left">
+					<span id="name">iPhone 13 Pro Max</span>  
+				
+				</div>
+				<div class="col-md-3 pull-right">
+					<span id="price">23.000.000đ</span>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="col-md-9 pull-left">
+					<span id="name">Ship</span>
+				</div>
+				<div class="col-md-3 pull-right">
+					<span id="price">Miễn phí</span>
+				</div>
+			</div>
+		</div>
+		<div class="total">
+			<div class="row">
+				<div class="col-md-9 pull-left">Tổng</div>
+				<div class="col-md-3 pull-right"><big>23.000.000đ</big></div>
+			</div>
+		</div>
+		<div class="tracking">
+			<div class="title">Theo dõi đơn hàng</div>
+		</div>
+		<div class="progress-track">
+			<ul id="progressbar">
+				<li class="step0 active " id="step1">Đã đặt đơn</li>
+				<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
+				<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
+				<li class="step0  active text-right" id="step4">Đã giao hàng thành công</li>
+			</ul>
+		</div>
+		
+
+	
+		   
+		</div>
+</div>
+<!-- /ksp1 -->
+				
+<!-- ksp2 -->
+<div id="khungSuaSanPham2" class="overlay" style="transform: scale(0);">
+	<div class="card overlayTable">
+		<div class="title">Chi tiết đơn hàng
+		  <button class="closet">
+			×
+		  </button>
+		</div>
+		<div class="info">
+		  <div class="row">
+			<div class="col-6 pull-left">
+			  <span id="heading">
+				Địa chỉ nhận hàng
+			  </span><br>
+			  <span id="details">
+				48/24 Âu Cơ, Phú Trung, Quận Tân Phú, TP.HCM                  </span>
+			</div>
+			<!-- <div class="col-6 pull-right">
+			 <span id="heading">Mã khách hàng: </span>
+			 <span id="details"> #14221</span>
+			</div> -->
+		  </div>
+			<div class="row">
+				<div class="col-7 pull-left">
+					<span id="heading">Ngày</span><br>
+					<span id="details">5-9-2023</span>
+				</div>
+				<div class="col-5 pull-right">
+					<span id="heading">Mã đơn hàng</span><br>
+					<span id="details">GHTK-1606070011</span>
+				</div>
+			</div>      
+		</div>      
+		<div class="pricing">
+			<div class="row">
+				<div class="col-md-9 pull-left">
+					<span id="name">iPhone 14 Pro Max</span>  
+				
+				</div>
+				<div class="col-md-3 pull-right">
+					<span id="price">27.090.000đ</span>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="col-md-9 pull-left">
+					<span id="name">Ship</span>
+				</div>
+				<div class="col-md-3 pull-right">
+					<span id="price">Miễn phí</span>
+				</div>
+			</div>
+		</div>
+		<div class="total">
+			<div class="row">
+				<div class="col-md-9 pull-left">Tổng</div>
+				<div class="col-md-3 pull-right"><big>27.090.000đ</big></div>
+			</div>
+		</div>
+		<div class="tracking">
+			<div class="title">Theo dõi đơn hàng</div>
+		</div>
+		<div class="progress-track">
+			<ul id="progressbar">
+				<li class="step0 active " id="step1">Đã đặt đơn</li>
+				<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
+				<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
+				<li class="step0  active text-right" id="step4">Đã giao hàng thành công</li>
+			</ul>
+		</div>
+		
+
+	
+		   
+		</div>
+</div>
+<!-- ksp2 -->
+
 		<div id="newsletter" class="section">
 			<!-- container -->
 			<div class="container">
@@ -419,7 +593,7 @@
 								<input class="input" type="email" placeholder="Nhập Email của bạn">
 								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Đăng kí</button>
 							</form>
-							<ul class="newsletter-follow">
+							<!-- <ul class="newsletter-follow">
 								<li>
 									<a href="#"><i class="fa fa-facebook"></i></a>
 								</li>
@@ -432,7 +606,7 @@
 								<li>
 									<a href="#"><i class="fa fa-pinterest"></i></a>
 								</li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
@@ -468,8 +642,8 @@
 								<h3 class="footer-title">Sản phẩm</h3>
 								<ul class="footer-links">
 									<li><a href="#quick-sale">Sản phẩm bán chạy</a></li>
-									<li><a href="samsung1.html">Samsung</a></li>
-									<li><a href="iphone1.html">iPhone</a></li>
+									<li><a href="#">Samsung</a></li>
+									<li><a href="#">iPhone</a></li>
 									<li><a href="#hot-deal">Ưu đãi</a></li>
 								</ul>
 							</div>
@@ -511,14 +685,14 @@
 					<!-- row -->
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<ul class="footer-payments">
+							<!-- <ul class="footer-payments">
 								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
 								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
 								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
 								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
 								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
 								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 						<!-- /row -->
@@ -543,6 +717,36 @@
             subMenu.classList.toggle("open-menu");
 		  }
 
+
+		  document.querySelectorAll('.closet').forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+          const overlay = closeButton.closest('.overlay');
+          overlay.style.transform = 'scale(0)';
+        });
+      });
+
+
+	  function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
 		</script>
 	</body>
 </html>

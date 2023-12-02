@@ -259,7 +259,7 @@ function login(e) {
 	// Kiểm tra tài khoản admin
 	if (username === "admin12" && password === "admin123456") {
 	  alert("Xin chào admin!");
-	  window.location.href = "admin/admin.html";
+	  window.location.href = "admin.html";
 	  return;
 	}
   
