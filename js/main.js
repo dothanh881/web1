@@ -358,7 +358,8 @@ function logout() {
 		  alert(`Bạn cần điền "${field.placeholder}"`);
 		  return;
 		}
-	  }	
+	  }
+	  
 	  alert("Thanh toán thành công!");
 	  return;
 	}

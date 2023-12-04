@@ -158,37 +158,36 @@ function displayCheckout(){
   }
 }
 
+function displayBill()
+{
+  let cartCost=localStorage.getItem('totalCost')
+  let cartItems=localStorage.getItem("productInCart");
+  cartItems=JSON.parse(cartItems);
+  let productContainer=document.querySelector(".pricing");
+  if(cartItems && productContainer)
+  {
+    productContainer.innerHTML=' ';
+    Object.values(cartItems).map(item =>{
+      productContainer.innerHTML +=  `
+      <div class="row">
+						<div class="col-md-9 pull-left">
+							<span id="name">${item.name}</span>  
+						</div>
+						<div class="col-md-3 pull-right">
+							<span id="price">${item.price}.000.000₫</span>
+						</div>
+					</div>
+      `;
+    });
+    productContainer.innerHTML +=  ` 
+    <div class="row">
+    <div class="col-md-9 pull-left">Tổng</div>
+    <div class="col-md-3 pull-right"><big>${cartCost}.000.000₫</big></div>
+  </div>
+    `
+}
+}
 
-// function displayCartDrop(){
-//   let cartCost=localStorage.getItem('totalCost')
-//   let cartItems=localStorage.getItem("productInCart");
-//   let productNumber=localStorage.getItem('cartNumber')
-//   cartItems=JSON.parse(cartItems);
-//   let productContainer=document.querySelector(".cart-list");
-//   if(cartItems && productContainer)
-//   {
-//     productContainer.innerHTML=' ';
-//     Object.values(cartItems).map(item =>{
-//       productContainer.innerHTML +=  `
-//       <div class="product-widget">
-// 					<div class="product-img">
-// 					    <img src="${item.img}" alt="">
-// 					</div>
-// 					<div class="product-body">
-// 							<h3 class="product-name"><a href="#">${item.name}</a></h3>
-// 							<h4 class="product-price"><span class="qty">${item.inCart}x</span>${item.price}.000.000₫</h4>
-// 					</div>
-// 					<button class="delete" onclick="removeFromCart(${item.tag})"><i class="fa fa-close"></i></button>
-// 			</div>
-//       `;
-//     });
-//     productContainer.innerHTML +=  ` 
-//     <div class="cart-summary">
-// 			<small>${productNumber} sản phẩm được chọn </small> 
-// 			<h5>Tổng tiền : ${cartCost}.000.000₫ </h5>
-// 		</div>
-//     `}
-// }
 function removeFromCart(tag) {
   let cartItems = localStorage.getItem('productInCart');
   cartItems = JSON.parse(cartItems);
@@ -229,3 +228,4 @@ cartInputNumbers.forEach((input) => {
 onLoadCartNumber();
 displayCart();
 displayCheckout();
+displayBill();

@@ -23,28 +23,54 @@
  		<!-- Font Awesome Icon -->
  		<link rel="stylesheet" href="css/font-awesome.min.css">
 
- 		<!-- Custom stlylesheet -->
  		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/user.css">
 		<link rel="stylesheet" href="css/searchproduct.css">
-		<style>
-	
-		</style>
-
     </head>
 	<body>
 		<!-- HEADER -->
 		<header>
 			<!-- TOP HEADER -->
-			<div id="top-header">
+			<div id="top-header" class="user">
 				<div class="container">
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> +098-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> cook.shop@email.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 273 An Dương Vương</a></li>
 					</ul>
-					<ul class="header-links pull-right">
+					<ul class="header-links pull-right ">
 						<li><a href="#"><i class="fa fa-money"></i> VND</a></li>
-						<li><a href="login.html"  ><i class="fa fa-user-o"></i> Tài khoản</a></li>
+						<li onclick="toggleMenu()"><img class="ava-user"  src="img/ava1.png"  alt="" > <a href="#">user1234</a></li>     
+						<div class="sub-menu-wrap" id="subMenu">
+						  <div class="sub-menu">
+							<div class="user-info">
+							  <img src="img/ava1.png" alt="">
+							  <h3>User1234</h3>
+							</div>
+		
+							<hr>
+		
+							<a href="profile.html" class="sub-menu-link">
+							  <img src="img/profile.png" alt="">
+							  <p>Chỉnh sửa hồ sơ</p>
+							  <span>></span>
+							</a>
+		
+							<a href="history.html" class="sub-menu-link">
+								<img src="img/history.png" alt="">
+								<p>Lịch sử mua hàng</p>
+								<span>></span>
+							  </a>
+					
+				
+							<a href="#" class="sub-menu-link" onclick="logout()">
+							  <img src="img/logout.png" alt="">
+							  <p>Đăng xuất</p>
+							  <span>></span>
+							</a>
+		
+						  </div>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -59,7 +85,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="index.html" class="logo">
+								<a href="user.html" class="logo">
 									<img src="./img/logo.png" alt="logo" >
 								</a>
 							</div>
@@ -78,66 +104,66 @@
 							
 									<div class="product-listss" id="product-listss">
 										<div class="prod">
-											<a href="product.html"><img src="img/product01.png" alt=""></a>
+											<a href="product1.html"><img src="img/product01.png" alt=""></a>
 											<div class="p-details">
-												<a href="product.html"><h2>iPhone 14 Pro Max</h2></a>
+												<a href="product1.html"><h2>iPhone 14 Pro Max</h2></a>
 											</div>
 										</div>
 										
 										<div class="prod">
-											<a href="product.html"><img src="img/product02.png" alt=""></a>
+											<a href="product1.html"><img src="img/product02.png" alt=""></a>
 											<div class="p-details">
-												<a href="product.html"><h2>iPhone 13 Pro Max</h2></a>
+												<a href="product1.html"><h2>iPhone 13 Pro Max</h2></a>
 											</div>
 										</div>
 										
 										<div class="prod">
-											<a href="product.html"><img src="img/product03.png" alt=""></a>
+											<a href="product1.html"><img src="img/product03.png" alt=""></a>
 											<div class="p-details">
-												<a href="product.html"><h2>iPhone 12 Pro Max</h2></a>
+												<a href="product1.html"><h2>iPhone 12 Pro Max</h2></a>
 											</div>
 										</div>
 									
 										<div class="prod">
-											<a href="product.html"><img src="img/product04.png" alt=""></a>
+											<a href="product1.html"><img src="img/product04.png" alt=""></a>
 											<div class="p-details">
-												<a href="product.html"><h2>iPhone 15 Pro Max</h2></a>
+												<a href="product1.html"><h2>iPhone 15 Pro Max</h2></a>
 											</div>
 										</div>
 										
 										<div class="prod">
-											<a href="productsamsung.html"><img src="img/product05.png" alt=""></a>
+											<a href="product2.html"><img src="img/product05.png" alt=""></a>
 											<div class="p-details">
-												<a href="productsamsung.html"><h2>Samsung Galaxy S23 Ultra</h2></a>
+												<a href="product2.html"><h2>Samsung Galaxy S23 Ultra</h2></a>
 											</div>
 										</div>
 										
 										<div class="prod">
-											<a href="productsamsung.html"><img src="img/product06.png" alt=""></a>
+											<a href="product2.html"><img src="img/product06.png" alt=""></a>
 											<div class="p-details">
-												<a href="productsamsung.html"><h2>Samsung Galaxy S21 5G</h2></a>
+												<a href="product2.html"><h2>Samsung Galaxy S21 5G</h2></a>
 											</div>
 										</div>
 									
 										<div class="prod">
-											<a href="productsamsung.html"><img src="img/product07.png" alt=""></a>
+											<a href="product2.html"><img src="img/product07.png" alt=""></a>
 											<div class="p-details">
-												<a href="productsamsung.html"><h2>Samsung Galaxy Z Flip 4</h2></a>
+												<a href="product2.html"><h2>Samsung Galaxy Z Flip 4</h2></a>
 											</div>
 										</div>
 									
 										<div class="prod">
-											<a href="productsamsung.html"><img src="img/product08.png" alt=""></a>
+											<a href="product2.html"><img src="img/product08.png" alt=""></a>
 											<div class="p-details">
-												<a href="productsamsung.html"><h2>Samsung Galaxy S20 Ultra</h2></a>
+												<a href="product2.html"><h2>Samsung Galaxy S20 Ultra</h2></a>
 											</div>
 										</div>
 									
 
 										<div class="prod">
-											<a href="product.html"><img src="img/product09.png" alt=""></a>
+											<a href="product1.html"><img src="img/product09.png" alt=""></a>
 											<div class="p-details">
-												<a href="product.html"><h2>iPhone 11 Pro </h2></a>
+												<a href="product1.html"><h2>iPhone 11 Pro Max</h2></a>
 											</div>
 										</div>
 									</div>
@@ -155,19 +181,20 @@
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
 										<span>Yêu thích</span>
-										<!-- <div class="qty">2</div> -->
+										<div class="qty">2</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
 										<!-- Cart -->
 										<div class="dropdown">
-											<a class="dropdown-toggle" aria-expanded="true" href="cartnotuser.html">
-												<i class="fa fa-shopping-cart"></i>
-													<div>Giỏ hàng</div>
-											
+											<a class="dropdown-toggle" aria-expanded="true" href="cart.html">
+											<i class="fa fa-shopping-cart"></i>
+										    <div>Giỏ hàng</div>
+										    <span class="qty">0</span>
 											</a>
 										</div>
 								<!-- /Cart -->
+
 								<!-- Menu Toogle -->
 								<div class="menu-toggle">
 									<a href="#">
@@ -196,9 +223,9 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li ><a href="index.html">Trang chủ</a></li>
+						<li ><a href="user.html">Trang chủ</a></li>
 						<li><a href="#">Liên hệ</a></li>
-						<li class="active"><a href="store.html">Sản phẩm</a></li>
+						<li class="active"><a href="store1.html">Sản phẩm</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -218,7 +245,7 @@
 				<div class="row">
 					<!-- ASIDE -->
 					<div id="aside" class="col-md-3">
-						<!-- aside Widget -->
+					
 						<div class="aside">
 							<h3 class="aside-title">PHÂN LOẠI</h3>
 							<div class="box">
@@ -244,7 +271,12 @@
                                 
                            	 	</div>
 									<button type="button" class="btn btn-primary btnnsearch" onsubmit=" validatePriceInput()">Tìm kiếm</button>
-                        	</div>
+                        </div>
+						
+						<!-- /aside Widget -->
+
+						<!-- aside Widget -->
+						
 						<!-- /aside Widget -->
 
 						
@@ -252,41 +284,43 @@
 						<!-- aside Widget -->
 						<div class="aside">
 							<h3 class="aside-title">Bán chạy</h3>
+							
 							<div class="product-widget">
-								<a href="product.html">
+								<a href="product1.html">
 									<div class="product-img">
 										<img src="./img/product01.png" alt="">
 									</div>
 								</a>
-								
+							
 								<div class="product-body">
-									<h3 class="product-name"><a href="product.html">iPhone 14 Pro Max</a></h3>
+									<h3 class="product-name"><a href="product1.html">iPhone 14 Pro Max</a></h3>
 									<h4 class="product-price">27.090.000₫ </h4>
 								</div>
 							</div>
 
 							<div class="product-widget">
-								<a href="product.html">
+								
+								<a href="product1.html">
 									<div class="product-img">
 										<img src="./img/product02.png" alt="">
 									</div>
 								</a>
-								
+							
 								<div class="product-body">
-									<h3 class="product-name"><a href="product.html">iPhone 13 Pro Max</a></h3>
+									<h3 class="product-name"><a href="product1.html">iPhone 13 Pro Max</a></h3>
 									<h4 class="product-price">23.990.000₫ </h4>
 								</div>
 							</div>
 
 							<div class="product-widget">
-								<a href="product.html">
+								<a href="product1.html">
 									<div class="product-img">
 										<img src="./img/product03.png" alt="">
 									</div>
 								</a>
 								
 								<div class="product-body">
-									<h3 class="product-name"><a href="product.html">iPhone 12 Pro Max</a></h3>
+									<h3 class="product-name"><a href="product1.html">iPhone 12 Pro Max</a></h3>
 									<h4 class="product-price">17.490.000₫ </h4>
 								</div>
 							</div>
@@ -317,83 +351,81 @@
 						<!-- store products -->
 						<div class="row prod-list">
 							<!-- product -->
-							
-							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20" data-category="iphone">
-									<a href="product.html">
-										<div class="product-img">
-											<img src="./img/product01.png" alt="">
+					<div class="col-md-4 col-xs-6">
+						<div class="product" data-id="0" data-price-range="over-20"  data-category="iphone">			
+						<a href="product1.html">
+							<div class="product-img">
+										<img src="./img/product01.png" alt="">
+										
+									</div>
+						</a>
+									
+									<div class="product-body">
+										<p class="product-category">iPhone</p>
+										<h3 class="product-name"><a href="product1.html">iPhone 14 Pro Max</a></h3>
+										<h4 class="product-price">27.000.000₫ </h4>
+										<div class="product-rating">
 											
 										</div>
-									</a>
-								
-									<div class="product-body">
-										<p class="product-category">Iphone</p>
-										<h3 class="product-name"><a href="product.html">iPhone 14 Pro Max</a></h3>
-										<h4 class="product-price">27.090.000₫ </h4>
-										<div class="product-rating">
-										
-										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item1">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-								
+									
 								</div>
 							</div>
 							<!-- /product -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="under-10" data-category="samsung">
-									<a href="productsamsung.html">
-										<div class="product-img">
-											<img src="./img/product08.png" alt="">
-											
-										</div>
-									</a>
-									
+								<div class="product" data-id="1" data-price-range="over-20" data-category="iphone">
+								
+								<a href="product1.html">
+									<div class="product-img">
+										<img src="./img/product02.png" alt="">
+										
+									</div>
+								</a>	
 									<div class="product-body">
-										<p class="product-category">Samsung </p>
-										<h3 class="product-name"><a href="productsamsung.html">SAMSUNG GALAXY S20 ULTRA</a></h3>
-										<h4 class="product-price">9.990.000₫ </h4>
+										<p class="product-category">iPhone</p>
+										<h3 class="product-name"><a href="product1.html">iPhone 13 Pro Max</a></h3>
+										<h4 class="product-price">23.000.000₫ </h4>
 										<div class="product-rating">
+										
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item2">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-								
+							
 								</div>
 							</div>
-							
-
-							
 							<!-- /product -->
 
 							<div class="clearfix visible-sm visible-xs"></div>
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20" data-category="iphone">
-									<a href="product.html">
+								<div class="product" data-id="2" data-price-range="10-20" data-category="iphone">
+								
+									<a href="product1.html">
 										<div class="product-img">
-											<img src="./img/product03.png" alt="">
-											
-										</div>
+										<img src="./img/product03.png" alt="">
+										
+									</div>
 									</a>
 									
 									<div class="product-body">
-										<p class="product-category">Iphone</p>
-										<h3 class="product-name"><a href="product.html">IPHONE 12 PRO MAX </a></h3>
+										<p class="product-category">iPhone</p>
+										<h3 class="product-name"><a href="product1.html">iPhone 12 Pro Max</a></h3>
 										<h4 class="product-price">17.490.000₫ </h4>
 										<div class="product-rating">
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item3">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-								
+									
 										
 								</div>
 							</div>
@@ -403,25 +435,25 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20" data-category="iphone">
-									<a href="product.html">
+								<div class="product" data-id="3" data-price-range="over-20" data-category="iphone">
+									<a href="product1.html">
 										<div class="product-img">
-											<img src="./img/product04.png" alt="">
-											
-										</div>
+										<img src="./img/product04.png" alt="">
+										
+									</div>
 									</a>
 									
 									<div class="product-body">
-										<p class="product-category">Iphone</p>
-										<h3 class="product-name"><a href="product.html">IPHONE 15 PRO MAX </a></h3>
+										<p class="product-category">iPhone</p>
+										<h3 class="product-name"><a href="product1.html">iPhone 15 Pro Max</a></h3>
 										<h4 class="product-price">33.590.000₫ </h4>
 										<div class="product-rating">
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item4">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-									
+								
 								</div>
 							</div>
 							<!-- /product -->
@@ -430,22 +462,22 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20" data-category="samsung">
-									<a href="productsamsung.html">
+								<div class="product" data-id="4" data-price-range="over-20" data-category="samsung">
+									<a href="product2.html">
 										<div class="product-img">
-											<img src="./img/product05.png" alt="">
-											
-										</div>
+										<img src="./img/product05.png" alt="">
+										
+									</div>
 									</a>
-								
+									
 									<div class="product-body">
 										<p class="product-category">Samsung</p>
-										<h3 class="product-name"><a href="productsamsung.html">SAMSUNG GALAXY S23 ULTRA</a></h3>
+										<h3 class="product-name"><a href="product2.html">Samsung Galaxy S23 Ultra</a></h3>
 										<h4 class="product-price">31.990.000₫</h4>
 										<div class="product-rating">
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item5">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
 									
@@ -456,78 +488,76 @@
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20" data-category="samsung">
-									<a href="productsamsung.html">
+								<div class="product" data-id="5" data-price-range="10-20" data-category="samsung">
+									<a href="product2.html">
 										<div class="product-img">
 										<img src="./img/product06.png" alt="">
 										
 									</div>
-								</a>
+									</a>
 									
 									<div class="product-body">
 										<p class="product-category">Samsung</p>
-										<h3 class="product-name"><a href="productsamsung.html">SAMSUNG GALAXY S21 5G</a></h3>
+										<h3 class="product-name"><a href="product2.html">Samsung Galaxy S21</a></h3>
 										<h4 class="product-price">10.590.000₫ </h4>
 										<div class="product-rating">
-											
+										
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item6">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
 									
 								</div>
 							</div>
-							
 							<!-- /product -->
 
 							<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="10-20" data-category="samsung">
-									<a href="productsamsung.html">
+								<div class="product" data-id="6" data-price-range="10-20" data-category="samsung">
+								<a href="product2.html">
 										<div class="product-img">
-											<img src="./img/product07.png" alt="">
-											
-										</div>
-									</a>
-									
+										<img src="./img/product07.png" alt="">
+										
+									</div>
+								</a>
+								
 									<div class="product-body">
 										<p class="product-category">Samsung </p>
-										<h3 class="product-name"><a href="productsamsung.html">SAMSUNG GALAXY Z FLIP 4</a></h3>
+										<h3 class="product-name"><a href="product2.html">Samsung Galaxy Z FLip 4</a></h3>
 										<h4 class="product-price">12.890.000₫ </h4>
 										<div class="product-rating">
-										
+											
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item7">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-									
+								
 								</div>
 							</div>
 							<!-- /product -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product" data-price-range="over-20" data-category="iphone">
-									<a href="product.html">
-										<div class="product-img">
-											<img src="./img/product02.png" alt="">
-											
-										</div>
+								<div class="product" data-id="7" data-price-range="under-10" data-category="samsung">
+									<a href="product2.html">
+									<div class="product-img">
+										<img src="./img/product08.png" alt="">
+										
+									</div>
 									</a>
 									
 									<div class="product-body">
-										<p class="product-category">Iphone</p>
-										<h3 class="product-name"><a href="product.html">iPhone 13 Pro Max</a></h3>
-										<h4 class="product-price">23.990.000₫ </h4>
+										<p class="product-category">Samsung </p>
+										<h3 class="product-name"><a href="product2.html">Samsung Galaxy S20 Ultra</a></h3>
+										<h4 class="product-price">9.990.000₫ </h4>
 										<div class="product-rating">
-										
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item8">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
 									
@@ -538,34 +568,30 @@
 							<div class="clearfix visible-sm visible-xs"></div>
 
 							<!-- product -->
-
-							<div class="col-md-4 col-xs-6" >
-								<div class="product" data-price-range="10-20" data-category="iphone">
-
-									<a href="product.html">
+							<div class="col-md-4 col-xs-6">
+								<div class="product" data-id="8" data-price-range="10-20" data-category="iphone">
+									<a href="product1.html">
 										<div class="product-img">
-											<img src="./img/product09.png" alt="">
-										</div>
+										<img src="./img/product09.png" alt="">
+									</div>
 									</a>
 									
 									<div class="product-body">
 										<p class="product-category">Iphone</p>
-										<h3 class="product-name"><a href="product.html">iPhone 11 Pro</a></h3>
+										<h3 class="product-name"><a href="product1.html">iPhone 11 Pro</a></h3>
 										<h4 class="product-price">10.490.000₫ </h4>
 										<div class="product-rating">
 										</div>
-										<div class="add-to-cart">
-											<button class="add-to-cart-btn" onclick="alert('Bạn cần đăng nhập để mua sản phẩm')"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
+										<div class="add-to-cart item9">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Bỏ vào giỏ hàng</button>
 										</div>
 									</div>
-									
+								
 										
 								</div>
 							</div>
 							<!-- /product -->
-
 						
-
 						<!-- /store products -->
 
 						<!-- store bottom filter -->
@@ -578,11 +604,11 @@
 			</div>
 
 			<!-- /container -->
-			<div class="store-filter ">
+			<div class="store-filter">
 				<ul class="store-pagination">
-					<li><a href="store.html">1</a></li>
-					<li ><a href="storepage2.html">2</a></li>
-					<li class="active">3</li>
+					<li > <a href="store1.html">1</a> </li>
+					<li class="active" >2</li>
+					<li><a href="store1page3.html">3</a></li>
 					<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 				</ul>
 			</div>
@@ -675,7 +701,7 @@
 								<h3 class="footer-title">Dịch Vụ</h3>
 								<ul class="footer-links">
 									<li><a href="#top-header">Tài khoản </a></li>
-									<li><a href="cartnotuser.html">Giỏ hàng</a></li>
+									<li><a href="cart.html">Giỏ hàng</a></li>
 									<li><a href="#">Yêu thích</a></li>
 									<li><a href="#">Hỗ trợ</a></li>
 								</ul>
@@ -721,6 +747,29 @@
 		<script src="js/main.js"></script>
 		<script src="js/searchproduct.js"></script>
 		<script>
+			
+			//menu profile
+            let subMenu = document.getElementById("subMenu");
+          function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+          }
+
+
+		  // lọc sản phẩm
+
+		  
+
+
+
+
+
+
+
+
+
+
+		
+
 
 		const priceFilterSelect = document.getElementById('price-filter');
 const categoryFilterSelect = document.getElementById('category-filter');
@@ -817,5 +866,6 @@ function filterProducts() {
 // Add event listener for search button
 searchButton.addEventListener('click', filterProducts);
 		</script>
+		<script src="js/cart.js"></script>
 	</body>
 </html>
