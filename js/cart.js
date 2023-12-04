@@ -211,20 +211,6 @@ function removeFromCart(tag) {
     displayCartDrop();
   }
 }
-function changeValue()
-{
-
-}
-let cartInputNumbers = document.querySelectorAll('.cart-input-number');
-cartInputNumbers.forEach((input) => {
-  input.addEventListener('change', function(event) {
-    let newQuantity = parseInt(event.target.value); // Lấy giá trị số lượng mới từ input
-    let productId = parseInt(input.dataset.productId); 
-
-    updateCartQuantity(productId, newQuantity);
-  });
-});
-
 onLoadCartNumber();
 displayCart();
 displayCheckout();

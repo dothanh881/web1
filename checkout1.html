@@ -280,7 +280,7 @@
 								</label>
 								<div class="caption">
 									<div class="form-group">
-										<input class="input" type="text" name="first-name" placeholder="Tên">
+										<input class="input name" type="text" name="first-name" placeholder="Tên">
 									</div>
 									<div class="form-group">
 										<input class="input" type="text" name="last-name" placeholder="Họ">
@@ -289,12 +289,10 @@
 										<input class="input" type="email" name="email" placeholder="Email">
 									</div>
 									<div class="form-group">
-										<input class="input" type="text" name="address" placeholder="Địa chỉ">
+										<input class="input address" type="text" name="address" placeholder="Địa chỉ">
 									</div>
-							
-								
 									<div class="form-group">
-										<input class="input" type="tel" name="tel" placeholder="Số điện thoại">
+										<input class="input phoneNumber" type="tel" name="tel" placeholder="Số điện thoại">
 									</div>
 								</div>
 							</div>
@@ -348,7 +346,7 @@
 								Nếu không nhận hàng, phải hoàn trả phí vận chuyển 2 chiều (100.000₫).
 							</label>
 						</div>
-						<a href="#" class="primary-btn order-submit"  onclick="document.getElementById('khungSuaSanPham1').style.transform = 'scale(1)';" 	onclick=" checkout()">Đặt hàng</a>
+						<a href="#" class="primary-btn order-submit" onclick=" checkout()">Đặt hàng</a>
 					</div>
 					<!-- /Order Details -->
 				</div>
@@ -358,63 +356,6 @@
 		</div>
 		<!-- /SECTION -->
 		<div id="khungSuaSanPham1" class="overlay" style="transform: scale(0);">
-			<div class="card overlayTable">
-				<div class="title">Chi tiết đơn hàng
-				  <button class="closet">
-					×
-				  </button>
-				</div>
-				<div class="info">
-				  <div class="row">
-					<div class="col-6 pull-left">
-					  <span id="heading">
-						Địa chỉ nhận hàng
-					  </span><br>
-					  <span id="details">
-						48/24 Âu Cơ, Phú Trung, Quận Tân Phú, TP.HCM</span>
-					</div>
-					<!-- <div class="col-6 pull-right">
-					 <span id="heading">Mã khách hàng: </span>
-					 <span id="details"> #14221</span>
-					</div> -->
-				  </div>
-					<div class="row">
-						<div class="col-7 pull-left">
-							<span id="heading">Ngày</span><br>
-							<span id="details">20-1-2023</span>
-						</div>
-						<div class="col-5 pull-right">
-							<span id="heading">Mã đơn hàng</span><br>
-							<span id="details">GHTK-1606070235</span>
-						</div>
-					</div>      
-				</div>      
-				<div class="pricing">
-					<div class="row">
-						<div class="col-md-9 pull-left">
-							<span id="name">Ship</span>
-						</div>
-						<div class="col-md-3 pull-right">
-							<span id="price">Miễn phí</span>
-						</div>
-					</div>
-				</div>
-				<div class="tracking">
-					<div class="title">Theo dõi đơn hàng</div>
-				</div>
-				<div class="progress-track">
-					<ul id="progressbar">
-						<li class="step0 active " id="step1">Đã đặt đơn</li>
-						<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
-						<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
-						<li class="step0  active text-right" id="step4">Đã giao hàng thành công</li>
-					</ul>
-				</div>
-				
-		
-			
-				   
-				</div>
 		</div>
 		<!-- NEWSLETTER -->
 		<div id="newsletter" class="section">

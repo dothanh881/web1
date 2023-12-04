@@ -334,10 +334,11 @@ function logout() {
 
 
   function checkout() {
-	const paymentMethodRadio1 = document.getElementById("payment-1");
-	const paymentMethodRadio3 = document.getElementById("payment-3");
-	const termsCheckbox = document.getElementById("terms");
-	const billingDetails = document.querySelector(".billing-details");
+	const paymentMethodRadio1 = document.getElementById("payment-1");//cod
+	const paymentMethodRadio3 = document.getElementById("payment-3");//truc tuyen
+	const checkboxAddress=document.getElementById("shiping-address");//checkbox different address
+	const termsCheckbox = document.getElementById("terms");//dieu khoan
+	// const billingDetails = document.querySelector(".shiping-details");
   
 
 	if (!(paymentMethodRadio1.checked || paymentMethodRadio3.checked)) {
@@ -352,27 +353,96 @@ function logout() {
 
 	if (paymentMethodRadio1.checked) {
 	
-	  const requiredFields = [...billingDetails.querySelectorAll("input[required]")];
+	  const requiredFields = [...checkboxAddress.querySelectorAll("input[required]")];
 	  for (const field of requiredFields) {
 		if (!field.value) {
 		  alert(`Bạn cần điền "${field.placeholder}"`);
 		  return;
 		}
 	  }
-	  
-	  alert("Thanh toán thành công!");
-	  return;
+	    const nameInput=document.querySelector(".input.name").value;
+		localStorage.setItem('nameUser', nameInput);
+		const addressInput=document.querySelector(".input.address").value;
+		localStorage.setItem('addressUser', addressInput);
+		const phoneInput=document.querySelector(".input.phoneNumber").value;
+		localStorage.setItem('phoneUser', phoneInput)
 	}
-
-	if (paymentMethodRadio3.checked) {
-	 
-	  window.location.href="payment.html";
-	  return;
+	if(checkboxAddress.checked)
+	{
+		const name=localStorage.getItem('nameUser')
+		const address=localStorage.getItem('addressUser')
+		const phoneNumber=localStorage.getItem('phoneUser')
+		const billMain=document.getElementById("khungSuaSanPham1");
+		const htmlContent=
+		`
+		<div class="card overlayTable">
+				<div class="title">Hóa đơn chi tiết
+				<button class="closet">
+					×
+				</button>
+				</div>
+				<div class="info">
+				<div class="row">
+					<div class="col-6 pull-left">
+					<span id="heading">
+						Người nhận :
+					</span><br>
+					<span id="details">
+						${name} </span>
+					</div>
+					<!-- <div class="col-6 pull-right">
+					<span id="heading">Số điện thoại</span>
+					<span id="details"> ${phoneNumber}</span>
+					</div> -->
+				</div>
+				<div class="row">
+					<div class="col-6 pull-left">
+					<span id="heading">
+						Địa chỉ nhận hàng
+					</span><br>
+					<span id="details">
+						${address} </span>
+					</div>
+					<!-- <div class="col-6 pull-right">
+					<span id="heading">Mã khách hàng: </span>
+					<span id="details"> #14221</span>
+					</div> -->
+				</div>
+					<div class="row">
+						<div class="col-7 pull-left">
+							<span id="heading">Ngày</span><br>
+							<span id="details">20-1-2023</span>
+						</div>
+						<div class="col-5 pull-right">
+							<span id="heading">Mã đơn hàng</span><br>
+							<span id="details">GHTK-1606070235</span>
+						</div>
+					</div>
+				</div>
+				<div class="pricing">
+					<div class="row">
+						<div class="col-md-9 pull-left">
+							<span id="name">Ship</span>
+						</div>
+						<div class="col-md-3 pull-right">
+							<span id="price">Miễn phí</span>
+						</div>
+					</div>
+				</div>
+				<div class="tracking">
+					<div class="title">Theo dõi đơn hàng</div>
+				</div>
+				<div class="progress-track">
+					<ul id="progressbar">
+						<li class="step0 active " id="step1">Đã đặt đơn</li>
+						<li class="step0 active text-center" id="step2">Đã lấy đơn</li>
+						<li class="step0 active text-right" id="step3">Đang trên đường giao</li>
+						<li class="step0  active text-right" id="step4">Đã giao hàng thành công</li>
+					</ul>
+				</div>
+				</div>
+		</div>
+		`
+		billMain.innerHTML=htmlContent;
 	}
-
-  }
-
-
-
-
- 
+}
